@@ -1,0 +1,9 @@
+D:\ProyectosMSANTOS\ALFA_ERP\ALFA_ERP\bin\Debug\ALFA_ERP.exe.config
+D:\ProyectosMSANTOS\ALFA_ERP\ALFA_ERP\bin\Debug\ALFA_ERP.exe
+D:\ProyectosMSANTOS\ALFA_ERP\ALFA_ERP\bin\Debug\ALFA_ERP.pdb
+D:\ProyectosMSANTOS\ALFA_ERP\ALFA_ERP\obj\Debug\ALFA_ERP.csprojResolveAssemblyReference.cache
+D:\ProyectosMSANTOS\ALFA_ERP\ALFA_ERP\obj\Debug\ALFA_ERP.frm_acceso.resources
+D:\ProyectosMSANTOS\ALFA_ERP\ALFA_ERP\obj\Debug\ALFA_ERP.Properties.Resources.resources
+D:\ProyectosMSANTOS\ALFA_ERP\ALFA_ERP\obj\Debug\ALFA_ERP.csproj.GenerateResource.Cache
+D:\ProyectosMSANTOS\ALFA_ERP\ALFA_ERP\obj\Debug\ALFA_ERP.exe
+D:\ProyectosMSANTOS\ALFA_ERP\ALFA_ERP\obj\Debug\ALFA_ERP.pdb
