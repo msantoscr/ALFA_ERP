@@ -85,6 +85,7 @@
             this.BTN_INGRESAR.TabIndex = 4;
             this.BTN_INGRESAR.Text = "INGRESAR";
             this.BTN_INGRESAR.UseVisualStyleBackColor = true;
+            this.BTN_INGRESAR.Click += new System.EventHandler(this.BTN_INGRESAR_Click);
             // 
             // frm_acceso
             // 
