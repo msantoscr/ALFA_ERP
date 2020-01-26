@@ -75,6 +75,7 @@
             this.TXT_PASSWORD.Size = new System.Drawing.Size(190, 27);
             this.TXT_PASSWORD.TabIndex = 3;
             this.TXT_PASSWORD.UseSystemPasswordChar = true;
+            this.TXT_PASSWORD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_PASSWORD_KeyPress);
             // 
             // BTN_INGRESAR
             // 

@@ -69,6 +69,28 @@ namespace ALFA_ERP
             return result;
         }
 
+        public string existeContra(string user)
+        {
+            string resultado = "";
+            try
+            {
+                cmd = new SqlCommand("SP_GET_PASSWORD_USER", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@NAME_USER", SqlDbType.NVarChar, 300).Value = user;
+
+                lector = cmd.ExecuteReader();
+                if (lector.Read())
+                {
+                    resultado = Convert.ToString(lector["PASSWORD"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"ERROR..");
+            }
+            return resultado;
+        }
+
         #endregion
     }
 }
