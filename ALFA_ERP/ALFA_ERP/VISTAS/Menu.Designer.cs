@@ -44,6 +44,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelFormHijo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelConceptosSubMenu.SuspendLayout();
             this.panelEmpresasSubMenu.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelSideMenu.Controls.Add(this.btnSalir);
             this.panelSideMenu.Controls.Add(this.panelConceptosSubMenu);
             this.panelSideMenu.Controls.Add(this.btnConceptos);
             this.panelSideMenu.Controls.Add(this.panelEmpresasSubMenu);
@@ -275,6 +277,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSalir.Location = new System.Drawing.Point(0, 455);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSalir.Size = new System.Drawing.Size(250, 45);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,6 +306,8 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.panelSideMenu.ResumeLayout(false);
             this.panelConceptosSubMenu.ResumeLayout(false);
             this.panelEmpresasSubMenu.ResumeLayout(false);
@@ -316,5 +336,6 @@
         private System.Windows.Forms.Button btnNuevoConcepto;
         private System.Windows.Forms.Panel panelFormHijo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

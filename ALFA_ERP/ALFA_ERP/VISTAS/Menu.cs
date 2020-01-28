@@ -12,10 +12,12 @@ namespace ALFA_ERP.VISTAS
 {
     public partial class Menu : Form
     {
-        public Menu()
+        string user;
+        public Menu(string usu)
         {
             InitializeComponent();
             DiseñoActualizado();
+            user = usu;
         }
 
         private void DiseñoActualizado()
@@ -62,7 +64,7 @@ namespace ALFA_ERP.VISTAS
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             //...
-            abrirHijoForm(new VISTAS.Clientes());
+            abrirHijoForm(new VISTAS.Clientes(user));
             //
             OcultarSubMenu();
         }
@@ -145,6 +147,17 @@ namespace ALFA_ERP.VISTAS
                 //mostramos el formulario
                 formularioHijo.Show();
             
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            btnSalir.PerformClick();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            
+            Application.Exit();
         }
     }
 }

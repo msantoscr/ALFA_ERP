@@ -52,11 +52,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ALFADataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="frm_acceso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="frm_acceso.Designer.cs">
+      <DependentUpon>frm_acceso.cs</DependentUpon>
     </Compile>
     <Compile Include="Metodos.cs" />
     <Compile Include="Program.cs" />
@@ -73,8 +73,8 @@
     <Compile Include="VISTAS\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="frm_acceso.resx">
+      <DependentUpon>frm_acceso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +121,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\engranaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.save.png" />
+    <None Include="Resources\FONDO SUBMENUS.jpg" />
+    <None Include="Resources\appbar.3d.x.png" />
+    <Content Include="Resources\logoFly.png" />
+    <Content Include="Resources\pluma.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

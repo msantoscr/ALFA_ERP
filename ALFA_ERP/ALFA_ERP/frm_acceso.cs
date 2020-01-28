@@ -85,7 +85,7 @@ namespace ALFA_ERP
                         if (contra.Equals(TXT_PASSWORD.Text.ToString().Trim())==true)
                         {
                             this.Hide();
-                            VISTAS.Menu frn_menu = new VISTAS.Menu();
+                            VISTAS.Menu frn_menu = new VISTAS.Menu(TXT_USER.Text.ToString().Trim());
                             frn_menu.Show();
                         }else
                         {
