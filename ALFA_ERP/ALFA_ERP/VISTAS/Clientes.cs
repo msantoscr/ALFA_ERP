@@ -197,5 +197,87 @@ namespace ALFA_ERP.VISTAS
         {
             TXT_RFC.Focus();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int result = 0;
+                result = mtd.actualizaCliente(
+                     TXT_NOMBRE.Text.ToString().Trim(),
+                     TXT_RAZON_SOCIAL.Text.ToString().Trim(),
+                     TXT_NOMBRE_COMERCIAL.Text.ToString().Trim(),
+                     TXT_RFC.Text.ToString().Trim(),
+                     TXT_CALLE.Text.ToString().Trim(),
+                     TXT_NUM_INT.Text.ToString().Trim(),
+                     TXT_NUM_EXT.Text.ToString().Trim(),
+                     TXT_COLONIA.Text.ToString().Trim(),
+                     TXT_CP.Text.ToString().Trim(),
+                     Convert.ToInt32(CMB_MUNICIPIO.Text.Split('*').GetValue(0).ToString().Trim()),
+                     Convert.ToInt32(CMB_PAIS.Text.Split('*').GetValue(0).ToString().Trim()),
+                     Convert.ToInt32(CMB_ESTADO.Text.Split('*').GetValue(0).ToString().Trim()),
+                     TXT_TELEFONO.Text.ToString().Trim(),
+                     TXT_CORREO.Text.ToString().Trim(),
+                     user,
+                     Convert.ToInt32(TXT_ID.Text.ToString().Trim())
+                     );
+
+                if (result == 1)
+                {
+
+                    MessageBox.Show("ACTUALIZADO CORRECTAMENTE", "ALFA ERP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RESET_CONTROLS();
+                    mtd.reporteClientes(DGV_CLIENTES);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DGV_CLIENTES_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DGV_CLIENTES.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                DGV_CLIENTES.CurrentRow.Selected = true;
+
+                TXT_NOMBRE.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_NAME"].Value.ToString();
+                TXT_CALLE.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_CALLE"].Value.ToString();
+                TXT_CP.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_CODIGO_POSTAL"].Value.ToString();
+                TXT_COLONIA.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_COLONIA"].Value.ToString();
+                TXT_NUM_EXT.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_NUMERO_EXTERIOR"].Value.ToString();
+                TXT_NUM_INT.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_NUMERO_INTERIOR"].Value.ToString();
+                TXT_RFC.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_RFC"].Value.ToString();
+                TXT_TELEFONO.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_TELEFONO"].Value.ToString();
+                TXT_CORREO.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_CORREO"].Value.ToString();
+                TXT_RAZON_SOCIAL.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_RAZON_SOCIAL"].Value.ToString();
+                TXT_NOMBRE_COMERCIAL.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_NOMBRE_COMERCIAL"].Value.ToString();
+                TXT_ID.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_ID"].Value.ToString();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int result = 0;
+                result = mtd.eliminarCliente(
+                     Convert.ToInt32(TXT_ID.Text.ToString().Trim())
+                     );
+
+                if (result == 1)
+                {
+
+                    MessageBox.Show("ELIMINADO CORRECTAMENTE", "ALFA ERP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RESET_CONTROLS();
+                    mtd.reporteClientes(DGV_CLIENTES);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

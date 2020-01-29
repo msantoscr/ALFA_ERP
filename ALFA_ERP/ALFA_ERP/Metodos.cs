@@ -251,6 +251,82 @@ namespace ALFA_ERP
                 cerrarConexion();
             }
         }
+
+        public int actualizaCliente(string nombre, string razon, string nomComercial, string rfc, string calle, string numInt, string numExt, string colonia, string codigoP, int municipio, int pais, int estado, string telefono, string correo, string userModifica, int id)
+        {
+            try
+            {
+
+                abrirConexion();
+                cmd = new SqlCommand("SP_ACTUALIZA_CLIENTE", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@NOMBRE_CLIENTE", SqlDbType.NVarChar).Value = nombre;
+                cmd.Parameters.Add("@RAZONSOCIAL", SqlDbType.NVarChar).Value = razon;
+                cmd.Parameters.Add("@NOMBRE_COMERCIAL", SqlDbType.NVarChar).Value = nomComercial;
+                cmd.Parameters.Add("@RFC", SqlDbType.NVarChar).Value = rfc;
+                cmd.Parameters.Add("@CALLE", SqlDbType.NVarChar).Value = calle;
+                cmd.Parameters.Add("@NUMERO_EXTERIOR", SqlDbType.NVarChar).Value = numExt;
+                cmd.Parameters.Add("@NUMERO_INTERIOR", SqlDbType.NVarChar).Value = numInt;
+                cmd.Parameters.Add("@COLONIA", SqlDbType.NVarChar).Value = colonia;
+                cmd.Parameters.Add("@CODIGO_POSTAL", SqlDbType.NVarChar).Value = codigoP;
+                cmd.Parameters.Add("@CIUDAD", SqlDbType.Int).Value = municipio;
+                cmd.Parameters.Add("@PAIS", SqlDbType.Int).Value = pais;
+                cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
+                cmd.Parameters.Add("@TELEFONO", SqlDbType.NVarChar).Value = telefono;
+                cmd.Parameters.Add("@CORREO", SqlDbType.NVarChar).Value = correo;
+                //FECHA SE HARA CON GETDATE();
+                cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+                //sucursal es dentro del stored
+                //ruta es dentro del stored
+                cmd.ExecuteNonQuery();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public int eliminarCliente(int id)
+        {
+            try
+            {
+
+                abrirConexion();
+                cmd = new SqlCommand("SP_ELIMINAR_CLIENTE", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+                //sucursal es dentro del stored
+                //ruta es dentro del stored
+                cmd.ExecuteNonQuery();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
         #endregion
     }
 }
