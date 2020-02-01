@@ -202,37 +202,47 @@ namespace ALFA_ERP.VISTAS
         {
             try
             {
-                int result = 0;
-                result = mtd.actualizaCliente(
-                     TXT_NOMBRE.Text.ToString().Trim(),
-                     TXT_RAZON_SOCIAL.Text.ToString().Trim(),
-                     TXT_NOMBRE_COMERCIAL.Text.ToString().Trim(),
-                     TXT_RFC.Text.ToString().Trim(),
-                     TXT_CALLE.Text.ToString().Trim(),
-                     TXT_NUM_INT.Text.ToString().Trim(),
-                     TXT_NUM_EXT.Text.ToString().Trim(),
-                     TXT_COLONIA.Text.ToString().Trim(),
-                     TXT_CP.Text.ToString().Trim(),
-                     Convert.ToInt32(CMB_MUNICIPIO.Text.Split('*').GetValue(0).ToString().Trim()),
-                     Convert.ToInt32(CMB_PAIS.Text.Split('*').GetValue(0).ToString().Trim()),
-                     Convert.ToInt32(CMB_ESTADO.Text.Split('*').GetValue(0).ToString().Trim()),
-                     TXT_TELEFONO.Text.ToString().Trim(),
-                     TXT_CORREO.Text.ToString().Trim(),
-                     user,
-                     Convert.ToInt32(TXT_ID.Text.ToString().Trim())
-                     );
-
-                if (result == 1)
+                if (DGV_CLIENTES.SelectedRows.Count > 0)
                 {
+                    int result = 0;
+                    result = mtd.actualizaCliente(
+                         TXT_NOMBRE.Text.ToString().Trim(),
+                         TXT_RAZON_SOCIAL.Text.ToString().Trim(),
+                         TXT_NOMBRE_COMERCIAL.Text.ToString().Trim(),
+                         TXT_RFC.Text.ToString().Trim(),
+                         TXT_CALLE.Text.ToString().Trim(),
+                         TXT_NUM_INT.Text.ToString().Trim(),
+                         TXT_NUM_EXT.Text.ToString().Trim(),
+                         TXT_COLONIA.Text.ToString().Trim(),
+                         TXT_CP.Text.ToString().Trim(),
+                         Convert.ToInt32(CMB_MUNICIPIO.Text.Split('*').GetValue(0).ToString().Trim()),
+                         Convert.ToInt32(CMB_PAIS.Text.Split('*').GetValue(0).ToString().Trim()),
+                         Convert.ToInt32(CMB_ESTADO.Text.Split('*').GetValue(0).ToString().Trim()),
+                         TXT_TELEFONO.Text.ToString().Trim(),
+                         TXT_CORREO.Text.ToString().Trim(),
+                         user,
+                         Convert.ToInt32(TXT_ID.Text.ToString().Trim())
+                         );
 
-                    MessageBox.Show("ACTUALIZADO CORRECTAMENTE", "ALFA ERP", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    RESET_CONTROLS();
-                    mtd.reporteClientes(DGV_CLIENTES);
+                    if (result == 1)
+                    {
+
+                        MessageBox.Show("ACTUALIZADO CORRECTAMENTE", "ALFA ERP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        RESET_CONTROLS();
+                        mtd.reporteClientes(DGV_CLIENTES);
+                        btnGuardar.Enabled = true;
+                    }
+                }else
+                {
+                    MessageBox.Show("NO SELECCIONO NINGUN DATO", "ALFA ERP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
             }
             catch (Exception ex)
             {
+                btnGuardar.Enabled = true;
                 MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
         }
 
@@ -240,6 +250,7 @@ namespace ALFA_ERP.VISTAS
         {
             if (DGV_CLIENTES.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
+                btnGuardar.Enabled = false;
                 DGV_CLIENTES.CurrentRow.Selected = true;
 
                 TXT_NOMBRE.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_NAME"].Value.ToString();
@@ -254,6 +265,9 @@ namespace ALFA_ERP.VISTAS
                 TXT_RAZON_SOCIAL.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_RAZON_SOCIAL"].Value.ToString();
                 TXT_NOMBRE_COMERCIAL.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_NOMBRE_COMERCIAL"].Value.ToString();
                 TXT_ID.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_ID"].Value.ToString();
+                CMB_PAIS.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_PAIS"].Value.ToString();
+                CMB_ESTADO.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_ESTADO"].Value.ToString();
+                CMB_MUNICIPIO.Text = DGV_CLIENTES.Rows[e.RowIndex].Cells["CLIENTE_CIUDAD"].Value.ToString();
             }
         }
 
@@ -272,10 +286,12 @@ namespace ALFA_ERP.VISTAS
                     MessageBox.Show("ELIMINADO CORRECTAMENTE", "ALFA ERP", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     RESET_CONTROLS();
                     mtd.reporteClientes(DGV_CLIENTES);
+                    btnGuardar.Enabled = true;
                 }
             }
             catch (Exception ex)
             {
+                btnGuardar.Enabled = true;
                 MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

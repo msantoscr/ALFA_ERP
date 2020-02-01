@@ -67,6 +67,12 @@
     <Compile Include="VISTAS\Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTAS\Empresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTAS\Empresas.Designer.cs">
+      <DependentUpon>Empresas.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTAS\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <EmbeddedResource Include="VISTAS\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTAS\Empresas.resx">
+      <DependentUpon>Empresas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTAS\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

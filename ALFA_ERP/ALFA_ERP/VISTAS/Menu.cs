@@ -87,7 +87,7 @@ namespace ALFA_ERP.VISTAS
         private void btnNuevaEmpresa_Click(object sender, EventArgs e)
         {
             //...
-            //mi codigo
+            abrirHijoForm(new VISTAS.Empresas(user));
             //
             OcultarSubMenu();
         }

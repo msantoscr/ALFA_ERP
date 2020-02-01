@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BTN_SALIR = new System.Windows.Forms.PictureBox();
             this.LBL_TITULO = new System.Windows.Forms.Label();
             this.LBL_NOMBRE = new System.Windows.Forms.Label();
@@ -40,31 +40,31 @@
             this.LBL_NUM_INT = new System.Windows.Forms.Label();
             this.LBL_COLONIA = new System.Windows.Forms.Label();
             this.LBL_CP = new System.Windows.Forms.Label();
-            this.TXT_NOMBRE = new System.Windows.Forms.TextBox();
-            this.TXT_RAZON_SOCIAL = new System.Windows.Forms.TextBox();
-            this.TXT_NOMBRE_COMERCIAL = new System.Windows.Forms.TextBox();
-            this.TXT_RFC = new System.Windows.Forms.TextBox();
-            this.TXT_CALLE = new System.Windows.Forms.TextBox();
-            this.TXT_TELEFONO = new System.Windows.Forms.TextBox();
-            this.TXT_CP = new System.Windows.Forms.TextBox();
-            this.TXT_COLONIA = new System.Windows.Forms.TextBox();
-            this.TXT_NUM_EXT = new System.Windows.Forms.TextBox();
             this.LBL_NUM_EXT = new System.Windows.Forms.Label();
             this.LBL_PAIS = new System.Windows.Forms.Label();
             this.LBL_ESTADO = new System.Windows.Forms.Label();
             this.LBL_MUNICIPIO = new System.Windows.Forms.Label();
-            this.CMB_PAIS = new System.Windows.Forms.ComboBox();
-            this.CMB_ESTADO = new System.Windows.Forms.ComboBox();
-            this.CMB_MUNICIPIO = new System.Windows.Forms.ComboBox();
             this.LBL_TELEFONO = new System.Windows.Forms.Label();
-            this.TXT_NUM_INT = new System.Windows.Forms.TextBox();
-            this.TXT_CORREO = new System.Windows.Forms.TextBox();
             this.LBL_CORREO = new System.Windows.Forms.Label();
             this.DGV_CLIENTES = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.TXT_ID = new System.Windows.Forms.TextBox();
+            this.TXT_NOMBRE = new System.Windows.Forms.TextBox();
+            this.TXT_CALLE = new System.Windows.Forms.TextBox();
+            this.TXT_CP = new System.Windows.Forms.TextBox();
+            this.TXT_COLONIA = new System.Windows.Forms.TextBox();
+            this.TXT_NUM_EXT = new System.Windows.Forms.TextBox();
+            this.TXT_NUM_INT = new System.Windows.Forms.TextBox();
+            this.TXT_RFC = new System.Windows.Forms.TextBox();
+            this.TXT_TELEFONO = new System.Windows.Forms.TextBox();
+            this.TXT_CORREO = new System.Windows.Forms.TextBox();
+            this.TXT_RAZON_SOCIAL = new System.Windows.Forms.TextBox();
+            this.CMB_PAIS = new System.Windows.Forms.ComboBox();
+            this.CMB_ESTADO = new System.Windows.Forms.ComboBox();
+            this.CMB_MUNICIPIO = new System.Windows.Forms.ComboBox();
+            this.TXT_NOMBRE_COMERCIAL = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_SALIR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CLIENTES)).BeginInit();
             this.SuspendLayout();
@@ -124,7 +124,7 @@
             this.LBL_NOM_COMERCIAL.AutoSize = true;
             this.LBL_NOM_COMERCIAL.BackColor = System.Drawing.Color.Transparent;
             this.LBL_NOM_COMERCIAL.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_NOM_COMERCIAL.Location = new System.Drawing.Point(360, 397);
+            this.LBL_NOM_COMERCIAL.Location = new System.Drawing.Point(360, 390);
             this.LBL_NOM_COMERCIAL.Name = "LBL_NOM_COMERCIAL";
             this.LBL_NOM_COMERCIAL.Size = new System.Drawing.Size(128, 19);
             this.LBL_NOM_COMERCIAL.TabIndex = 7;
@@ -190,81 +190,6 @@
             this.LBL_CP.TabIndex = 12;
             this.LBL_CP.Text = "CP:";
             // 
-            // TXT_NOMBRE
-            // 
-            this.TXT_NOMBRE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_NOMBRE.Location = new System.Drawing.Point(455, 46);
-            this.TXT_NOMBRE.Name = "TXT_NOMBRE";
-            this.TXT_NOMBRE.Size = new System.Drawing.Size(173, 20);
-            this.TXT_NOMBRE.TabIndex = 13;
-            this.TXT_NOMBRE.Leave += new System.EventHandler(this.TXT_NOMBRE_Leave);
-            // 
-            // TXT_RAZON_SOCIAL
-            // 
-            this.TXT_RAZON_SOCIAL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_RAZON_SOCIAL.Location = new System.Drawing.Point(455, 283);
-            this.TXT_RAZON_SOCIAL.Name = "TXT_RAZON_SOCIAL";
-            this.TXT_RAZON_SOCIAL.Size = new System.Drawing.Size(173, 20);
-            this.TXT_RAZON_SOCIAL.TabIndex = 14;
-            // 
-            // TXT_NOMBRE_COMERCIAL
-            // 
-            this.TXT_NOMBRE_COMERCIAL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_NOMBRE_COMERCIAL.Location = new System.Drawing.Point(485, 396);
-            this.TXT_NOMBRE_COMERCIAL.Name = "TXT_NOMBRE_COMERCIAL";
-            this.TXT_NOMBRE_COMERCIAL.Size = new System.Drawing.Size(143, 20);
-            this.TXT_NOMBRE_COMERCIAL.TabIndex = 15;
-            // 
-            // TXT_RFC
-            // 
-            this.TXT_RFC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_RFC.Location = new System.Drawing.Point(455, 205);
-            this.TXT_RFC.Name = "TXT_RFC";
-            this.TXT_RFC.Size = new System.Drawing.Size(173, 20);
-            this.TXT_RFC.TabIndex = 16;
-            // 
-            // TXT_CALLE
-            // 
-            this.TXT_CALLE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_CALLE.Location = new System.Drawing.Point(455, 75);
-            this.TXT_CALLE.Name = "TXT_CALLE";
-            this.TXT_CALLE.Size = new System.Drawing.Size(173, 20);
-            this.TXT_CALLE.TabIndex = 17;
-            this.TXT_CALLE.Leave += new System.EventHandler(this.TXT_CALLE_Leave);
-            // 
-            // TXT_TELEFONO
-            // 
-            this.TXT_TELEFONO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_TELEFONO.Location = new System.Drawing.Point(455, 231);
-            this.TXT_TELEFONO.Name = "TXT_TELEFONO";
-            this.TXT_TELEFONO.Size = new System.Drawing.Size(173, 20);
-            this.TXT_TELEFONO.TabIndex = 18;
-            // 
-            // TXT_CP
-            // 
-            this.TXT_CP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_CP.Location = new System.Drawing.Point(455, 101);
-            this.TXT_CP.Name = "TXT_CP";
-            this.TXT_CP.Size = new System.Drawing.Size(173, 20);
-            this.TXT_CP.TabIndex = 19;
-            // 
-            // TXT_COLONIA
-            // 
-            this.TXT_COLONIA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_COLONIA.Location = new System.Drawing.Point(455, 127);
-            this.TXT_COLONIA.Name = "TXT_COLONIA";
-            this.TXT_COLONIA.Size = new System.Drawing.Size(173, 20);
-            this.TXT_COLONIA.TabIndex = 20;
-            // 
-            // TXT_NUM_EXT
-            // 
-            this.TXT_NUM_EXT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_NUM_EXT.Location = new System.Drawing.Point(455, 153);
-            this.TXT_NUM_EXT.Name = "TXT_NUM_EXT";
-            this.TXT_NUM_EXT.Size = new System.Drawing.Size(173, 20);
-            this.TXT_NUM_EXT.TabIndex = 22;
-            this.TXT_NUM_EXT.Leave += new System.EventHandler(this.TXT_NUM_EXT_Leave);
-            // 
             // LBL_NUM_EXT
             // 
             this.LBL_NUM_EXT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -313,35 +238,6 @@
             this.LBL_MUNICIPIO.TabIndex = 25;
             this.LBL_MUNICIPIO.Text = "Municipio:";
             // 
-            // CMB_PAIS
-            // 
-            this.CMB_PAIS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CMB_PAIS.FormattingEnabled = true;
-            this.CMB_PAIS.Location = new System.Drawing.Point(455, 309);
-            this.CMB_PAIS.Name = "CMB_PAIS";
-            this.CMB_PAIS.Size = new System.Drawing.Size(173, 21);
-            this.CMB_PAIS.TabIndex = 26;
-            this.CMB_PAIS.SelectedIndexChanged += new System.EventHandler(this.CMB_PAIS_SelectedIndexChanged);
-            // 
-            // CMB_ESTADO
-            // 
-            this.CMB_ESTADO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CMB_ESTADO.FormattingEnabled = true;
-            this.CMB_ESTADO.Location = new System.Drawing.Point(455, 335);
-            this.CMB_ESTADO.Name = "CMB_ESTADO";
-            this.CMB_ESTADO.Size = new System.Drawing.Size(173, 21);
-            this.CMB_ESTADO.TabIndex = 27;
-            this.CMB_ESTADO.SelectedIndexChanged += new System.EventHandler(this.CMB_ESTADO_SelectedIndexChanged);
-            // 
-            // CMB_MUNICIPIO
-            // 
-            this.CMB_MUNICIPIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CMB_MUNICIPIO.FormattingEnabled = true;
-            this.CMB_MUNICIPIO.Location = new System.Drawing.Point(455, 362);
-            this.CMB_MUNICIPIO.Name = "CMB_MUNICIPIO";
-            this.CMB_MUNICIPIO.Size = new System.Drawing.Size(173, 21);
-            this.CMB_MUNICIPIO.TabIndex = 28;
-            // 
             // LBL_TELEFONO
             // 
             this.LBL_TELEFONO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -353,23 +249,6 @@
             this.LBL_TELEFONO.Size = new System.Drawing.Size(66, 19);
             this.LBL_TELEFONO.TabIndex = 29;
             this.LBL_TELEFONO.Text = "Telefono:";
-            // 
-            // TXT_NUM_INT
-            // 
-            this.TXT_NUM_INT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_NUM_INT.Location = new System.Drawing.Point(455, 179);
-            this.TXT_NUM_INT.Name = "TXT_NUM_INT";
-            this.TXT_NUM_INT.Size = new System.Drawing.Size(173, 20);
-            this.TXT_NUM_INT.TabIndex = 30;
-            this.TXT_NUM_INT.Leave += new System.EventHandler(this.TXT_NUM_INT_Leave);
-            // 
-            // TXT_CORREO
-            // 
-            this.TXT_CORREO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXT_CORREO.Location = new System.Drawing.Point(455, 257);
-            this.TXT_CORREO.Name = "TXT_CORREO";
-            this.TXT_CORREO.Size = new System.Drawing.Size(173, 20);
-            this.TXT_CORREO.TabIndex = 32;
             // 
             // LBL_CORREO
             // 
@@ -390,25 +269,25 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DGV_CLIENTES.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.DGV_CLIENTES.BackgroundColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_CLIENTES.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_CLIENTES.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DGV_CLIENTES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_CLIENTES.EnableHeadersVisualStyles = false;
             this.DGV_CLIENTES.GridColor = System.Drawing.Color.Teal;
             this.DGV_CLIENTES.Location = new System.Drawing.Point(2, 47);
             this.DGV_CLIENTES.Name = "DGV_CLIENTES";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Olive;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.DGV_CLIENTES.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Olive;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.DGV_CLIENTES.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DGV_CLIENTES.Size = new System.Drawing.Size(352, 471);
             this.DGV_CLIENTES.TabIndex = 35;
             this.DGV_CLIENTES.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CLIENTES_CellDoubleClick);
@@ -424,7 +303,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(364, 422);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(76, 48);
+            this.btnGuardar.Size = new System.Drawing.Size(76, 27);
             this.btnGuardar.TabIndex = 36;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -439,9 +318,9 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(455, 422);
+            this.btnActualizar.Location = new System.Drawing.Point(446, 422);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(79, 48);
+            this.btnActualizar.Size = new System.Drawing.Size(81, 27);
             this.btnActualizar.TabIndex = 37;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -456,9 +335,9 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(552, 422);
+            this.btnEliminar.Location = new System.Drawing.Point(533, 422);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(76, 48);
+            this.btnEliminar.Size = new System.Drawing.Size(76, 27);
             this.btnEliminar.TabIndex = 38;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -474,37 +353,154 @@
             this.TXT_ID.Size = new System.Drawing.Size(43, 20);
             this.TXT_ID.TabIndex = 39;
             // 
+            // TXT_NOMBRE
+            // 
+            this.TXT_NOMBRE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_NOMBRE.Location = new System.Drawing.Point(446, 49);
+            this.TXT_NOMBRE.Name = "TXT_NOMBRE";
+            this.TXT_NOMBRE.Size = new System.Drawing.Size(182, 20);
+            this.TXT_NOMBRE.TabIndex = 40;
+            // 
+            // TXT_CALLE
+            // 
+            this.TXT_CALLE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_CALLE.Location = new System.Drawing.Point(446, 75);
+            this.TXT_CALLE.Name = "TXT_CALLE";
+            this.TXT_CALLE.Size = new System.Drawing.Size(182, 20);
+            this.TXT_CALLE.TabIndex = 41;
+            // 
+            // TXT_CP
+            // 
+            this.TXT_CP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_CP.Location = new System.Drawing.Point(446, 102);
+            this.TXT_CP.Name = "TXT_CP";
+            this.TXT_CP.Size = new System.Drawing.Size(182, 20);
+            this.TXT_CP.TabIndex = 42;
+            // 
+            // TXT_COLONIA
+            // 
+            this.TXT_COLONIA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_COLONIA.Location = new System.Drawing.Point(446, 130);
+            this.TXT_COLONIA.Name = "TXT_COLONIA";
+            this.TXT_COLONIA.Size = new System.Drawing.Size(182, 20);
+            this.TXT_COLONIA.TabIndex = 43;
+            // 
+            // TXT_NUM_EXT
+            // 
+            this.TXT_NUM_EXT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_NUM_EXT.Location = new System.Drawing.Point(446, 154);
+            this.TXT_NUM_EXT.Name = "TXT_NUM_EXT";
+            this.TXT_NUM_EXT.Size = new System.Drawing.Size(182, 20);
+            this.TXT_NUM_EXT.TabIndex = 44;
+            // 
+            // TXT_NUM_INT
+            // 
+            this.TXT_NUM_INT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_NUM_INT.Location = new System.Drawing.Point(446, 180);
+            this.TXT_NUM_INT.Name = "TXT_NUM_INT";
+            this.TXT_NUM_INT.Size = new System.Drawing.Size(182, 20);
+            this.TXT_NUM_INT.TabIndex = 45;
+            // 
+            // TXT_RFC
+            // 
+            this.TXT_RFC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_RFC.Location = new System.Drawing.Point(446, 208);
+            this.TXT_RFC.Name = "TXT_RFC";
+            this.TXT_RFC.Size = new System.Drawing.Size(182, 20);
+            this.TXT_RFC.TabIndex = 46;
+            // 
+            // TXT_TELEFONO
+            // 
+            this.TXT_TELEFONO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_TELEFONO.Location = new System.Drawing.Point(446, 234);
+            this.TXT_TELEFONO.Name = "TXT_TELEFONO";
+            this.TXT_TELEFONO.Size = new System.Drawing.Size(182, 20);
+            this.TXT_TELEFONO.TabIndex = 47;
+            // 
+            // TXT_CORREO
+            // 
+            this.TXT_CORREO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_CORREO.Location = new System.Drawing.Point(446, 258);
+            this.TXT_CORREO.Name = "TXT_CORREO";
+            this.TXT_CORREO.Size = new System.Drawing.Size(182, 20);
+            this.TXT_CORREO.TabIndex = 48;
+            // 
+            // TXT_RAZON_SOCIAL
+            // 
+            this.TXT_RAZON_SOCIAL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_RAZON_SOCIAL.Location = new System.Drawing.Point(446, 283);
+            this.TXT_RAZON_SOCIAL.Name = "TXT_RAZON_SOCIAL";
+            this.TXT_RAZON_SOCIAL.Size = new System.Drawing.Size(182, 20);
+            this.TXT_RAZON_SOCIAL.TabIndex = 49;
+            // 
+            // CMB_PAIS
+            // 
+            this.CMB_PAIS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CMB_PAIS.FormattingEnabled = true;
+            this.CMB_PAIS.Location = new System.Drawing.Point(446, 309);
+            this.CMB_PAIS.Name = "CMB_PAIS";
+            this.CMB_PAIS.Size = new System.Drawing.Size(182, 21);
+            this.CMB_PAIS.TabIndex = 50;
+            this.CMB_PAIS.SelectedIndexChanged += new System.EventHandler(this.CMB_PAIS_SelectedIndexChanged);
+            // 
+            // CMB_ESTADO
+            // 
+            this.CMB_ESTADO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CMB_ESTADO.FormattingEnabled = true;
+            this.CMB_ESTADO.Location = new System.Drawing.Point(446, 336);
+            this.CMB_ESTADO.Name = "CMB_ESTADO";
+            this.CMB_ESTADO.Size = new System.Drawing.Size(182, 21);
+            this.CMB_ESTADO.TabIndex = 51;
+            this.CMB_ESTADO.SelectedIndexChanged += new System.EventHandler(this.CMB_ESTADO_SelectedIndexChanged);
+            // 
+            // CMB_MUNICIPIO
+            // 
+            this.CMB_MUNICIPIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CMB_MUNICIPIO.FormattingEnabled = true;
+            this.CMB_MUNICIPIO.Location = new System.Drawing.Point(446, 362);
+            this.CMB_MUNICIPIO.Name = "CMB_MUNICIPIO";
+            this.CMB_MUNICIPIO.Size = new System.Drawing.Size(182, 21);
+            this.CMB_MUNICIPIO.TabIndex = 52;
+            // 
+            // TXT_NOMBRE_COMERCIAL
+            // 
+            this.TXT_NOMBRE_COMERCIAL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TXT_NOMBRE_COMERCIAL.Location = new System.Drawing.Point(485, 389);
+            this.TXT_NOMBRE_COMERCIAL.Name = "TXT_NOMBRE_COMERCIAL";
+            this.TXT_NOMBRE_COMERCIAL.Size = new System.Drawing.Size(143, 20);
+            this.TXT_NOMBRE_COMERCIAL.TabIndex = 53;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ALFA_ERP.Properties.Resources.FONDO_SUBMENUS;
             this.ClientSize = new System.Drawing.Size(668, 522);
+            this.Controls.Add(this.TXT_NOMBRE_COMERCIAL);
+            this.Controls.Add(this.CMB_MUNICIPIO);
+            this.Controls.Add(this.CMB_ESTADO);
+            this.Controls.Add(this.CMB_PAIS);
+            this.Controls.Add(this.TXT_RAZON_SOCIAL);
+            this.Controls.Add(this.TXT_CORREO);
+            this.Controls.Add(this.TXT_TELEFONO);
+            this.Controls.Add(this.TXT_RFC);
+            this.Controls.Add(this.TXT_NUM_INT);
+            this.Controls.Add(this.TXT_NUM_EXT);
+            this.Controls.Add(this.TXT_COLONIA);
+            this.Controls.Add(this.TXT_CP);
+            this.Controls.Add(this.TXT_CALLE);
+            this.Controls.Add(this.TXT_NOMBRE);
             this.Controls.Add(this.TXT_ID);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.DGV_CLIENTES);
-            this.Controls.Add(this.TXT_CORREO);
             this.Controls.Add(this.LBL_CORREO);
-            this.Controls.Add(this.TXT_NUM_INT);
             this.Controls.Add(this.LBL_TELEFONO);
-            this.Controls.Add(this.CMB_MUNICIPIO);
-            this.Controls.Add(this.CMB_ESTADO);
-            this.Controls.Add(this.CMB_PAIS);
             this.Controls.Add(this.LBL_MUNICIPIO);
             this.Controls.Add(this.LBL_ESTADO);
             this.Controls.Add(this.LBL_PAIS);
-            this.Controls.Add(this.TXT_NUM_EXT);
             this.Controls.Add(this.LBL_NUM_EXT);
-            this.Controls.Add(this.TXT_COLONIA);
-            this.Controls.Add(this.TXT_CP);
-            this.Controls.Add(this.TXT_TELEFONO);
-            this.Controls.Add(this.TXT_CALLE);
-            this.Controls.Add(this.TXT_RFC);
-            this.Controls.Add(this.TXT_NOMBRE_COMERCIAL);
-            this.Controls.Add(this.TXT_RAZON_SOCIAL);
-            this.Controls.Add(this.TXT_NOMBRE);
             this.Controls.Add(this.LBL_CP);
             this.Controls.Add(this.LBL_COLONIA);
             this.Controls.Add(this.LBL_NUM_INT);
@@ -536,30 +532,30 @@
         private System.Windows.Forms.Label LBL_NUM_INT;
         private System.Windows.Forms.Label LBL_COLONIA;
         private System.Windows.Forms.Label LBL_CP;
-        private System.Windows.Forms.TextBox TXT_NOMBRE;
-        private System.Windows.Forms.TextBox TXT_RAZON_SOCIAL;
-        private System.Windows.Forms.TextBox TXT_NOMBRE_COMERCIAL;
-        private System.Windows.Forms.TextBox TXT_RFC;
-        private System.Windows.Forms.TextBox TXT_CALLE;
-        private System.Windows.Forms.TextBox TXT_TELEFONO;
-        private System.Windows.Forms.TextBox TXT_CP;
-        private System.Windows.Forms.TextBox TXT_COLONIA;
-        private System.Windows.Forms.TextBox TXT_NUM_EXT;
         private System.Windows.Forms.Label LBL_NUM_EXT;
         private System.Windows.Forms.Label LBL_PAIS;
         private System.Windows.Forms.Label LBL_ESTADO;
         private System.Windows.Forms.Label LBL_MUNICIPIO;
-        private System.Windows.Forms.ComboBox CMB_PAIS;
-        private System.Windows.Forms.ComboBox CMB_ESTADO;
-        private System.Windows.Forms.ComboBox CMB_MUNICIPIO;
         private System.Windows.Forms.Label LBL_TELEFONO;
-        private System.Windows.Forms.TextBox TXT_NUM_INT;
-        private System.Windows.Forms.TextBox TXT_CORREO;
         private System.Windows.Forms.Label LBL_CORREO;
         private System.Windows.Forms.DataGridView DGV_CLIENTES;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox TXT_ID;
+        private System.Windows.Forms.TextBox TXT_NOMBRE;
+        private System.Windows.Forms.TextBox TXT_CALLE;
+        private System.Windows.Forms.TextBox TXT_CP;
+        private System.Windows.Forms.TextBox TXT_COLONIA;
+        private System.Windows.Forms.TextBox TXT_NUM_EXT;
+        private System.Windows.Forms.TextBox TXT_NUM_INT;
+        private System.Windows.Forms.TextBox TXT_RFC;
+        private System.Windows.Forms.TextBox TXT_TELEFONO;
+        private System.Windows.Forms.TextBox TXT_CORREO;
+        private System.Windows.Forms.TextBox TXT_RAZON_SOCIAL;
+        private System.Windows.Forms.ComboBox CMB_PAIS;
+        private System.Windows.Forms.ComboBox CMB_ESTADO;
+        private System.Windows.Forms.ComboBox CMB_MUNICIPIO;
+        private System.Windows.Forms.TextBox TXT_NOMBRE_COMERCIAL;
     }
 }
