@@ -15,13 +15,13 @@ namespace ALFA_ERP
     {
         #region "VARIABLES DE CONEXION"
 
-            public SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["ALFA_ERP.Properties.Settings.ALFAConnectionString"].ConnectionString.ToString());
-            public SqlCommand cmd;
-            public SqlDataAdapter adaptador;
-            public DataTable datatable;
-            public SqlDataReader lector;
-            public int Rows;
-            public DataSet Dataset;
+        public SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["ALFA_ERP.Properties.Settings.ALFAConnectionString"].ConnectionString.ToString());
+        public SqlCommand cmd;
+        public SqlDataAdapter adaptador;
+        public DataTable datatable;
+        public SqlDataReader lector;
+        public int Rows;
+        public DataSet Dataset;
 
         #endregion
 
@@ -53,7 +53,7 @@ namespace ALFA_ERP
             {
                 cmd = new SqlCommand("SP_GET_USER_LOGIN", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@NOMBRE_USER", SqlDbType.NVarChar,300).Value = user;
+                cmd.Parameters.Add("@NOMBRE_USER", SqlDbType.NVarChar, 300).Value = user;
 
                 lector = cmd.ExecuteReader();
                 if (lector.Read())
@@ -62,7 +62,7 @@ namespace ALFA_ERP
                 }
                 lector.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ERROR");
             }
@@ -86,7 +86,7 @@ namespace ALFA_ERP
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"ERROR..");
+                MessageBox.Show(ex.Message, "ERROR..");
             }
             return resultado;
         }
@@ -123,7 +123,7 @@ namespace ALFA_ERP
             try
             {
                 DataSet ds = new DataSet();
-                cmd = new SqlCommand("SP_OBTENER_PAISES",conexion);
+                cmd = new SqlCommand("SP_OBTENER_PAISES", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
@@ -138,7 +138,7 @@ namespace ALFA_ERP
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
             finally
@@ -207,11 +207,11 @@ namespace ALFA_ERP
             }
         }
 
-        public int INSERTAR_CLIENTE(string nombre,string razon,string nomComercial,string rfc, string calle, string numInt,string numExt,string colonia, string codigoP,int municipio,int pais, int estado,string telefono,string correo,string userModifica)
+        public int INSERTAR_CLIENTE(string nombre, string razon, string nomComercial, string rfc, string calle, string numInt, string numExt, string colonia, string codigoP, int municipio, int pais, int estado, string telefono, string correo, string userModifica)
         {
             try
             {
-                
+
                 abrirConexion();
                 cmd = new SqlCommand("SP_INSERTA_NUEVO_CLIENTE", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -230,13 +230,12 @@ namespace ALFA_ERP
                 cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
                 cmd.Parameters.Add("@TELEFONO", SqlDbType.NVarChar).Value = telefono;
                 cmd.Parameters.Add("@CORREO", SqlDbType.NVarChar).Value = correo;
-                //FECHA SE HARA CON GETDATE();
+
                 cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
                 SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
                 message.Direction = ParameterDirection.Output;
                 cmd.Parameters.Add(message);
-                //sucursal es dentro del stored
-                //ruta es dentro del stored
+               
                 cmd.ExecuteNonQuery();
 
                 return 1;
@@ -275,14 +274,13 @@ namespace ALFA_ERP
                 cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
                 cmd.Parameters.Add("@TELEFONO", SqlDbType.NVarChar).Value = telefono;
                 cmd.Parameters.Add("@CORREO", SqlDbType.NVarChar).Value = correo;
-                //FECHA SE HARA CON GETDATE();
+             
                 cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
                 cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
                 SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
                 message.Direction = ParameterDirection.Output;
                 cmd.Parameters.Add(message);
-                //sucursal es dentro del stored
-                //ruta es dentro del stored
+               
                 cmd.ExecuteNonQuery();
 
                 return 1;
@@ -311,8 +309,7 @@ namespace ALFA_ERP
                 SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
                 message.Direction = ParameterDirection.Output;
                 cmd.Parameters.Add(message);
-                //sucursal es dentro del stored
-                //ruta es dentro del stored
+               
                 cmd.ExecuteNonQuery();
 
                 return 1;
@@ -353,13 +350,12 @@ namespace ALFA_ERP
                 cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
                 cmd.Parameters.Add("@TELEFONO", SqlDbType.NVarChar).Value = telefono;
                 cmd.Parameters.Add("@CORREO", SqlDbType.NVarChar).Value = correo;
-                //FECHA SE HARA CON GETDATE();
+                
                 cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
                 SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
                 message.Direction = ParameterDirection.Output;
                 cmd.Parameters.Add(message);
-                //sucursal es dentro del stored
-                //ruta es dentro del stored
+             
                 cmd.ExecuteNonQuery();
 
                 return 1;
@@ -419,14 +415,13 @@ namespace ALFA_ERP
                 cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
                 cmd.Parameters.Add("@TELEFONO", SqlDbType.NVarChar).Value = telefono;
                 cmd.Parameters.Add("@CORREO", SqlDbType.NVarChar).Value = correo;
-                //FECHA SE HARA CON GETDATE();
+
                 cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
                 cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
                 SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
                 message.Direction = ParameterDirection.Output;
                 cmd.Parameters.Add(message);
-                //sucursal es dentro del stored
-                //ruta es dentro del stored
+
                 cmd.ExecuteNonQuery();
 
                 return 1;
@@ -442,6 +437,172 @@ namespace ALFA_ERP
             }
         }
 
+        #endregion
+
+        #region "CONCEPTOS"
+
+        public void reporteConceptos(DataGridView dgv)
+        {
+
+            try
+            {
+                abrirConexion();
+                cmd = new SqlCommand("SP_REPORTE_CONCEPTOS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter Message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 200);
+                Message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(Message);
+
+                adaptador = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR..");
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public int INSERTAR_CONCEPTO(string descripcion, string userModifica)
+        {
+            try
+            {
+
+                abrirConexion();
+                cmd = new SqlCommand("SP_INSERTA_NUEVO_CONCEPTO", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@DESCRIPCION", SqlDbType.NVarChar).Value = descripcion;
+                cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+
+                cmd.ExecuteNonQuery();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        #endregion
+
+        #region "MAQUILAS"
+
+        public void reporteMaquila(DataGridView grid)
+        {
+            try
+            {
+                cmd = new SqlCommand("SP_REPORTE_MAQUILAS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter Message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 200);
+                Message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(Message);
+
+                adaptador = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+
+                grid.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR..");
+            }
+        }
+
+        public int insertaMaquila(string nombre,string rfc, string calle, string numInt, string numExt, string colonia, int municipio, int pais, int estado, string userModifica)
+        {
+            try
+            {
+
+                abrirConexion();
+                cmd = new SqlCommand("SP_INSERTA_NUEVA_MAQUILA", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@NOMBRE_MAQUILA", SqlDbType.NVarChar).Value = nombre;
+                cmd.Parameters.Add("@RFC", SqlDbType.NVarChar).Value = rfc;
+                cmd.Parameters.Add("@CALLE", SqlDbType.NVarChar).Value = calle;
+                cmd.Parameters.Add("@NUMERO_EXTERIOR", SqlDbType.NVarChar).Value = numExt;
+                cmd.Parameters.Add("@NUMERO_INTERIOR", SqlDbType.NVarChar).Value = numInt;
+                cmd.Parameters.Add("@COLONIA", SqlDbType.NVarChar).Value = colonia;
+                cmd.Parameters.Add("@CIUDAD", SqlDbType.Int).Value = municipio;
+                cmd.Parameters.Add("@PAIS", SqlDbType.Int).Value = pais;
+                cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
+
+                cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+
+                cmd.ExecuteNonQuery();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public int actualizaMaquila(string nombre, string rfc, string calle, string numInt, string numExt, string colonia, int municipio, int pais, int estado, string userModifica, int id)
+        {
+            try
+            {
+
+                abrirConexion();
+                cmd = new SqlCommand("SP_ACTUALIZA_MAQUILA", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@NOMBRE_MAQUILA", SqlDbType.NVarChar).Value = nombre;
+                cmd.Parameters.Add("@RFC", SqlDbType.NVarChar).Value = rfc;
+                cmd.Parameters.Add("@CALLE", SqlDbType.NVarChar).Value = calle;
+                cmd.Parameters.Add("@NUMERO_EXTERIOR", SqlDbType.NVarChar).Value = numExt;
+                cmd.Parameters.Add("@NUMERO_INTERIOR", SqlDbType.NVarChar).Value = numInt;
+                cmd.Parameters.Add("@COLONIA", SqlDbType.NVarChar).Value = colonia;
+                cmd.Parameters.Add("@CIUDAD", SqlDbType.Int).Value = municipio;
+                cmd.Parameters.Add("@PAIS", SqlDbType.Int).Value = pais;
+                cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
+
+                cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+
+                cmd.ExecuteNonQuery();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
         #endregion
     }
 }

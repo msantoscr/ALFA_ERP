@@ -25,6 +25,7 @@ namespace ALFA_ERP.VISTAS
             panelClientesSubMenu.Visible = false;
             panelEmpresasSubMenu.Visible = false;
             panelConceptosSubMenu.Visible = false;
+            panelMaquilaSubMenu.Visible = false;
         }
 
         private void OcultarSubMenu()
@@ -35,7 +36,8 @@ namespace ALFA_ERP.VISTAS
                 panelEmpresasSubMenu.Visible = false;
             if (panelConceptosSubMenu.Visible == true)
                 panelConceptosSubMenu.Visible = false;
-
+            if (panelMaquilaSubMenu.Visible == true)
+                panelConceptosSubMenu.Visible = false;
         }
 
 
@@ -112,7 +114,7 @@ namespace ALFA_ERP.VISTAS
         private void btnNuevoConcepto_Click(object sender, EventArgs e)
         {
             //...
-            //mi codigo
+            abrirHijoForm(new VISTAS.Conceptos(user));
             //
             OcultarSubMenu();
         }
@@ -127,28 +129,45 @@ namespace ALFA_ERP.VISTAS
 
         #endregion
 
+        #region "MAQUILA"
+        private void btnMaquila_Click(object sender, EventArgs e)
+        {
+            MostrarSubmenu(panelMaquilaSubMenu);
+        }
+
+        private void btnNuevaMaquila_Click(object sender, EventArgs e)
+        {
+            abrirHijoForm(new VISTAS.Maquilas(user));
+            //
+            OcultarSubMenu();
+        }
+
+
+        #endregion
+
+
+
         private Form activeForm = null;
         private void abrirHijoForm(Form formularioHijo)
         {
             if (activeForm != null)
                 //ALMACENAMOS EL FORMULARIO ACTIVO LO CERRAMOS Y ABRIMOS EL NUEVO FORMULARIO HIJO
                 activeForm.Close();
-                activeForm = formularioHijo;
+            activeForm = formularioHijo;
 
-                //EL FORMULARIO HIJO NO ES DE NIVEL SUPERIOR POR LO TANTO SE COMPORTARA COMO UN CONTROL
-                formularioHijo.TopLevel = false;
-                formularioHijo.FormBorderStyle = FormBorderStyle.None;
-                formularioHijo.Dock = DockStyle.Fill;
-                panelFormHijo.Controls.Add(formularioHijo);
-                //asociamos el formulario con el panel contenedor
-                panelFormHijo.Tag = formularioHijo;
-                //traer el formulario hacia enfrente SI HAY UN LOGO ENCIMA
-                formularioHijo.BringToFront();
-                //mostramos el formulario
-                formularioHijo.Show();
-            
+            //EL FORMULARIO HIJO NO ES DE NIVEL SUPERIOR POR LO TANTO SE COMPORTARA COMO UN CONTROL
+            formularioHijo.TopLevel = false;
+            formularioHijo.FormBorderStyle = FormBorderStyle.None;
+            formularioHijo.Dock = DockStyle.Fill;
+            panelFormHijo.Controls.Add(formularioHijo);
+            //asociamos el formulario con el panel contenedor
+            panelFormHijo.Tag = formularioHijo;
+            //traer el formulario hacia enfrente SI HAY UN LOGO ENCIMA
+            formularioHijo.BringToFront();
+            //mostramos el formulario
+            formularioHijo.Show();
+
         }
-
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
             btnSalir.PerformClick();
@@ -159,5 +178,11 @@ namespace ALFA_ERP.VISTAS
             
             Application.Exit();
         }
+
+
+
+        
+
+
     }
 }

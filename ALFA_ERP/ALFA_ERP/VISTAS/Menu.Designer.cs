@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.panelConceptosSubMenu = new System.Windows.Forms.Panel();
-            this.btnReporteConceptos = new System.Windows.Forms.Button();
-            this.btnNuevoConcepto = new System.Windows.Forms.Button();
             this.btnConceptos = new System.Windows.Forms.Button();
             this.panelEmpresasSubMenu = new System.Windows.Forms.Panel();
             this.btnReporteEmpresas = new System.Windows.Forms.Button();
@@ -44,13 +40,22 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelFormHijo = new System.Windows.Forms.Panel();
+            this.btnNuevoConcepto = new System.Windows.Forms.Button();
+            this.btnReporteConceptos = new System.Windows.Forms.Button();
+            this.panelConceptosSubMenu = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMaquila = new System.Windows.Forms.Button();
+            this.panelMaquilaSubMenu = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
-            this.panelConceptosSubMenu.SuspendLayout();
             this.panelEmpresasSubMenu.SuspendLayout();
             this.panelClientesSubMenu.SuspendLayout();
             this.panelFormHijo.SuspendLayout();
+            this.panelConceptosSubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelMaquilaSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -58,6 +63,8 @@
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.panelSideMenu.Controls.Add(this.btnSalir);
+            this.panelSideMenu.Controls.Add(this.panelMaquilaSubMenu);
+            this.panelSideMenu.Controls.Add(this.btnMaquila);
             this.panelSideMenu.Controls.Add(this.panelConceptosSubMenu);
             this.panelSideMenu.Controls.Add(this.btnConceptos);
             this.panelSideMenu.Controls.Add(this.panelEmpresasSubMenu);
@@ -71,65 +78,6 @@
             this.panelSideMenu.Size = new System.Drawing.Size(250, 561);
             this.panelSideMenu.TabIndex = 0;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSalir.Location = new System.Drawing.Point(0, 455);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSalir.Size = new System.Drawing.Size(250, 45);
-            this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // panelConceptosSubMenu
-            // 
-            this.panelConceptosSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelConceptosSubMenu.Controls.Add(this.btnReporteConceptos);
-            this.panelConceptosSubMenu.Controls.Add(this.btnNuevoConcepto);
-            this.panelConceptosSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConceptosSubMenu.Location = new System.Drawing.Point(0, 367);
-            this.panelConceptosSubMenu.Name = "panelConceptosSubMenu";
-            this.panelConceptosSubMenu.Size = new System.Drawing.Size(250, 88);
-            this.panelConceptosSubMenu.TabIndex = 5;
-            // 
-            // btnReporteConceptos
-            // 
-            this.btnReporteConceptos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReporteConceptos.FlatAppearance.BorderSize = 0;
-            this.btnReporteConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteConceptos.ForeColor = System.Drawing.Color.LightGray;
-            this.btnReporteConceptos.Location = new System.Drawing.Point(0, 40);
-            this.btnReporteConceptos.Name = "btnReporteConceptos";
-            this.btnReporteConceptos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnReporteConceptos.Size = new System.Drawing.Size(250, 40);
-            this.btnReporteConceptos.TabIndex = 2;
-            this.btnReporteConceptos.Text = "Reporte Conceptos";
-            this.btnReporteConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporteConceptos.UseVisualStyleBackColor = true;
-            this.btnReporteConceptos.Click += new System.EventHandler(this.btnReporteConceptos_Click);
-            // 
-            // btnNuevoConcepto
-            // 
-            this.btnNuevoConcepto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNuevoConcepto.FlatAppearance.BorderSize = 0;
-            this.btnNuevoConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoConcepto.ForeColor = System.Drawing.Color.LightGray;
-            this.btnNuevoConcepto.Location = new System.Drawing.Point(0, 0);
-            this.btnNuevoConcepto.Name = "btnNuevoConcepto";
-            this.btnNuevoConcepto.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnNuevoConcepto.Size = new System.Drawing.Size(250, 40);
-            this.btnNuevoConcepto.TabIndex = 1;
-            this.btnNuevoConcepto.Text = "Nuevo";
-            this.btnNuevoConcepto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoConcepto.UseVisualStyleBackColor = true;
-            this.btnNuevoConcepto.Click += new System.EventHandler(this.btnNuevoConcepto_Click);
-            // 
             // btnConceptos
             // 
             this.btnConceptos.Dock = System.Windows.Forms.DockStyle.Top;
@@ -139,7 +87,7 @@
             this.btnConceptos.Location = new System.Drawing.Point(0, 322);
             this.btnConceptos.Name = "btnConceptos";
             this.btnConceptos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnConceptos.Size = new System.Drawing.Size(250, 45);
+            this.btnConceptos.Size = new System.Drawing.Size(233, 45);
             this.btnConceptos.TabIndex = 4;
             this.btnConceptos.Text = "Conceptos";
             this.btnConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -154,7 +102,7 @@
             this.panelEmpresasSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEmpresasSubMenu.Location = new System.Drawing.Point(0, 231);
             this.panelEmpresasSubMenu.Name = "panelEmpresasSubMenu";
-            this.panelEmpresasSubMenu.Size = new System.Drawing.Size(250, 91);
+            this.panelEmpresasSubMenu.Size = new System.Drawing.Size(233, 91);
             this.panelEmpresasSubMenu.TabIndex = 3;
             // 
             // btnReporteEmpresas
@@ -166,7 +114,7 @@
             this.btnReporteEmpresas.Location = new System.Drawing.Point(0, 40);
             this.btnReporteEmpresas.Name = "btnReporteEmpresas";
             this.btnReporteEmpresas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnReporteEmpresas.Size = new System.Drawing.Size(250, 40);
+            this.btnReporteEmpresas.Size = new System.Drawing.Size(233, 40);
             this.btnReporteEmpresas.TabIndex = 2;
             this.btnReporteEmpresas.Text = "Reporte Empresas";
             this.btnReporteEmpresas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,7 +130,7 @@
             this.btnNuevaEmpresa.Location = new System.Drawing.Point(0, 0);
             this.btnNuevaEmpresa.Name = "btnNuevaEmpresa";
             this.btnNuevaEmpresa.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnNuevaEmpresa.Size = new System.Drawing.Size(250, 40);
+            this.btnNuevaEmpresa.Size = new System.Drawing.Size(233, 40);
             this.btnNuevaEmpresa.TabIndex = 1;
             this.btnNuevaEmpresa.Text = "Nuevo";
             this.btnNuevaEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,7 +146,7 @@
             this.btnEmpresas.Location = new System.Drawing.Point(0, 186);
             this.btnEmpresas.Name = "btnEmpresas";
             this.btnEmpresas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEmpresas.Size = new System.Drawing.Size(250, 45);
+            this.btnEmpresas.Size = new System.Drawing.Size(233, 45);
             this.btnEmpresas.TabIndex = 2;
             this.btnEmpresas.Text = "Empresas";
             this.btnEmpresas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +161,7 @@
             this.panelClientesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelClientesSubMenu.Location = new System.Drawing.Point(0, 98);
             this.panelClientesSubMenu.Name = "panelClientesSubMenu";
-            this.panelClientesSubMenu.Size = new System.Drawing.Size(250, 88);
+            this.panelClientesSubMenu.Size = new System.Drawing.Size(233, 88);
             this.panelClientesSubMenu.TabIndex = 1;
             // 
             // btnReporteClientes
@@ -225,7 +173,7 @@
             this.btnReporteClientes.Location = new System.Drawing.Point(0, 40);
             this.btnReporteClientes.Name = "btnReporteClientes";
             this.btnReporteClientes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnReporteClientes.Size = new System.Drawing.Size(250, 40);
+            this.btnReporteClientes.Size = new System.Drawing.Size(233, 40);
             this.btnReporteClientes.TabIndex = 2;
             this.btnReporteClientes.Text = "Reporte Clientes";
             this.btnReporteClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -241,7 +189,7 @@
             this.btnNuevoCliente.Location = new System.Drawing.Point(0, 0);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnNuevoCliente.Size = new System.Drawing.Size(250, 40);
+            this.btnNuevoCliente.Size = new System.Drawing.Size(233, 40);
             this.btnNuevoCliente.TabIndex = 1;
             this.btnNuevoCliente.Text = "Nuevo";
             this.btnNuevoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -257,7 +205,7 @@
             this.btnClientes.Location = new System.Drawing.Point(0, 53);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnClientes.Size = new System.Drawing.Size(250, 45);
+            this.btnClientes.Size = new System.Drawing.Size(233, 45);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -269,7 +217,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 53);
+            this.panelLogo.Size = new System.Drawing.Size(233, 53);
             this.panelLogo.TabIndex = 1;
             // 
             // panelFormHijo
@@ -282,6 +230,49 @@
             this.panelFormHijo.Size = new System.Drawing.Size(684, 561);
             this.panelFormHijo.TabIndex = 1;
             // 
+            // btnNuevoConcepto
+            // 
+            this.btnNuevoConcepto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevoConcepto.FlatAppearance.BorderSize = 0;
+            this.btnNuevoConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoConcepto.ForeColor = System.Drawing.Color.LightGray;
+            this.btnNuevoConcepto.Location = new System.Drawing.Point(0, 0);
+            this.btnNuevoConcepto.Name = "btnNuevoConcepto";
+            this.btnNuevoConcepto.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnNuevoConcepto.Size = new System.Drawing.Size(233, 40);
+            this.btnNuevoConcepto.TabIndex = 1;
+            this.btnNuevoConcepto.Text = "Nuevo";
+            this.btnNuevoConcepto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoConcepto.UseVisualStyleBackColor = true;
+            this.btnNuevoConcepto.Click += new System.EventHandler(this.btnNuevoConcepto_Click);
+            // 
+            // btnReporteConceptos
+            // 
+            this.btnReporteConceptos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporteConceptos.FlatAppearance.BorderSize = 0;
+            this.btnReporteConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteConceptos.ForeColor = System.Drawing.Color.LightGray;
+            this.btnReporteConceptos.Location = new System.Drawing.Point(0, 40);
+            this.btnReporteConceptos.Name = "btnReporteConceptos";
+            this.btnReporteConceptos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnReporteConceptos.Size = new System.Drawing.Size(233, 40);
+            this.btnReporteConceptos.TabIndex = 2;
+            this.btnReporteConceptos.Text = "Reporte Conceptos";
+            this.btnReporteConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteConceptos.UseVisualStyleBackColor = true;
+            this.btnReporteConceptos.Click += new System.EventHandler(this.btnReporteConceptos_Click);
+            // 
+            // panelConceptosSubMenu
+            // 
+            this.panelConceptosSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelConceptosSubMenu.Controls.Add(this.btnReporteConceptos);
+            this.panelConceptosSubMenu.Controls.Add(this.btnNuevoConcepto);
+            this.panelConceptosSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConceptosSubMenu.Location = new System.Drawing.Point(0, 367);
+            this.panelConceptosSubMenu.Name = "panelConceptosSubMenu";
+            this.panelConceptosSubMenu.Size = new System.Drawing.Size(233, 88);
+            this.panelConceptosSubMenu.TabIndex = 5;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -292,6 +283,80 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnMaquila
+            // 
+            this.btnMaquila.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMaquila.FlatAppearance.BorderSize = 0;
+            this.btnMaquila.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaquila.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMaquila.Location = new System.Drawing.Point(0, 455);
+            this.btnMaquila.Name = "btnMaquila";
+            this.btnMaquila.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMaquila.Size = new System.Drawing.Size(233, 45);
+            this.btnMaquila.TabIndex = 6;
+            this.btnMaquila.Text = "Maquilas";
+            this.btnMaquila.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaquila.UseVisualStyleBackColor = true;
+            this.btnMaquila.Click += new System.EventHandler(this.btnMaquila_Click);
+            // 
+            // panelMaquilaSubMenu
+            // 
+            this.panelMaquilaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMaquilaSubMenu.Controls.Add(this.button2);
+            this.panelMaquilaSubMenu.Controls.Add(this.button3);
+            this.panelMaquilaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMaquilaSubMenu.Location = new System.Drawing.Point(0, 500);
+            this.panelMaquilaSubMenu.Name = "panelMaquilaSubMenu";
+            this.panelMaquilaSubMenu.Size = new System.Drawing.Size(233, 88);
+            this.panelMaquilaSubMenu.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.LightGray;
+            this.button2.Location = new System.Drawing.Point(0, 40);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(233, 40);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Reporte Clientes";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.LightGray;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(233, 40);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Nuevo";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnNuevaMaquila_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSalir.Location = new System.Drawing.Point(0, 588);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSalir.Size = new System.Drawing.Size(233, 45);
+            this.btnSalir.TabIndex = 8;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Menu
             // 
@@ -308,11 +373,12 @@
             this.Text = "Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.panelSideMenu.ResumeLayout(false);
-            this.panelConceptosSubMenu.ResumeLayout(false);
             this.panelEmpresasSubMenu.ResumeLayout(false);
             this.panelClientesSubMenu.ResumeLayout(false);
             this.panelFormHijo.ResumeLayout(false);
+            this.panelConceptosSubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelMaquilaSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -330,11 +396,15 @@
         private System.Windows.Forms.Button btnReporteEmpresas;
         private System.Windows.Forms.Button btnNuevaEmpresa;
         private System.Windows.Forms.Button btnEmpresas;
+        private System.Windows.Forms.Panel panelFormHijo;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelConceptosSubMenu;
         private System.Windows.Forms.Button btnReporteConceptos;
         private System.Windows.Forms.Button btnNuevoConcepto;
-        private System.Windows.Forms.Panel panelFormHijo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelMaquilaSubMenu;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnMaquila;
         private System.Windows.Forms.Button btnSalir;
     }
 }
