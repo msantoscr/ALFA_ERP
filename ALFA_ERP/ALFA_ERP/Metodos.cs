@@ -604,5 +604,104 @@ namespace ALFA_ERP
             }
         }
         #endregion
+
+        public void reporteBroker(DataGridView grid)
+        {
+            try
+            {
+                cmd = new SqlCommand("SP_REPORTE_BROKERS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter Message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 200);
+                Message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(Message);
+
+                adaptador = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+
+                grid.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR..");
+            }
+        }
+
+        public int insertaBroker(string nombre, string rfc, string web, string telefono, string giro, int municipio, int pais, int estado, string userModifica)
+        {
+            try
+            {
+
+                abrirConexion();
+                cmd = new SqlCommand("SP_INSERTA_NUEVO_BROKER", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@NOMBRE_BROKER", SqlDbType.NVarChar).Value = nombre;
+                cmd.Parameters.Add("@RFC", SqlDbType.NVarChar).Value = rfc;
+                cmd.Parameters.Add("@BROKER_WEB", SqlDbType.NVarChar).Value = web;
+                cmd.Parameters.Add("@BROKER_GIRO", SqlDbType.NVarChar).Value = giro;
+                cmd.Parameters.Add("@BROKER_TELEFONO", SqlDbType.NVarChar).Value = telefono;
+                cmd.Parameters.Add("@CIUDAD", SqlDbType.Int).Value = municipio;
+                cmd.Parameters.Add("@PAIS", SqlDbType.Int).Value = pais;
+                cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
+
+                cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+
+                cmd.ExecuteNonQuery();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public int actualizaBroker(string nombre, string rfc, string web, string telefono, string giro, int municipio, int pais, int estado, string userModifica, int id)
+        {
+            try
+            {
+
+                abrirConexion();
+                cmd = new SqlCommand("SP_ACTUALIZA_BROKER", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@NOMBRE_BROKER", SqlDbType.NVarChar).Value = nombre;
+                cmd.Parameters.Add("@RFC", SqlDbType.NVarChar).Value = rfc;
+                cmd.Parameters.Add("@BROKER_WEB", SqlDbType.NVarChar).Value = web;
+                cmd.Parameters.Add("@BROKER_GIRO", SqlDbType.NVarChar).Value = giro;
+                cmd.Parameters.Add("@BROKER_TELEFONO", SqlDbType.NVarChar).Value = telefono;
+                cmd.Parameters.Add("@CIUDAD", SqlDbType.Int).Value = municipio;
+                cmd.Parameters.Add("@PAIS", SqlDbType.Int).Value = pais;
+                cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
+
+                cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+
+                cmd.ExecuteNonQuery();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
     }
 }

@@ -26,6 +26,8 @@ namespace ALFA_ERP.VISTAS
             panelEmpresasSubMenu.Visible = false;
             panelConceptosSubMenu.Visible = false;
             panelMaquilaSubMenu.Visible = false;
+            panelBrokersSubMenu.Visible = false;
+            panelSociosSubMenu.Visible = false;
         }
 
         private void OcultarSubMenu()
@@ -37,7 +39,11 @@ namespace ALFA_ERP.VISTAS
             if (panelConceptosSubMenu.Visible == true)
                 panelConceptosSubMenu.Visible = false;
             if (panelMaquilaSubMenu.Visible == true)
-                panelConceptosSubMenu.Visible = false;
+                panelMaquilaSubMenu.Visible = false;
+            if (panelBrokersSubMenu.Visible == true)
+                panelBrokersSubMenu.Visible = false;
+            if (panelSociosSubMenu.Visible == true)
+                panelSociosSubMenu.Visible = false;
         }
 
 
@@ -54,7 +60,7 @@ namespace ALFA_ERP.VISTAS
             }
         }
 
-       
+
 
 
         #region "SUBMENU CLIENTES"
@@ -145,7 +151,31 @@ namespace ALFA_ERP.VISTAS
 
         #endregion
 
+        #region "BROKERS"
+        private void btnBroker_Click(object sender, EventArgs e)
+        {
+            MostrarSubmenu(panelBrokersSubMenu);
+        }
+        private void BTN_NUEVO_BROKER_Click(object sender, EventArgs e)
+        {
+            abrirHijoForm(new VISTAS.Broker(user));
+            //
+            OcultarSubMenu();
+        }
 
+        #endregion
+
+        #region "SOCIOS"
+        private void btnSocios_Click(object sender, EventArgs e)
+        {
+            MostrarSubmenu(panelSociosSubMenu);
+        }
+        private void BTN_NUEVO_SOCIO_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
 
         private Form activeForm = null;
         private void abrirHijoForm(Form formularioHijo)
@@ -175,13 +205,14 @@ namespace ALFA_ERP.VISTAS
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            
+
             Application.Exit();
         }
 
+        private void panelFormHijo_Paint(object sender, PaintEventArgs e)
+        {
 
-
-        
+        }
 
 
     }

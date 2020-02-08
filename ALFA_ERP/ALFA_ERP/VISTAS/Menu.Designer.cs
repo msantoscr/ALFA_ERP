@@ -29,6 +29,22 @@
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.panelSociosSubMenu = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.BTN_NUEVO_SOCIO = new System.Windows.Forms.Button();
+            this.btnSocios = new System.Windows.Forms.Button();
+            this.panelBrokersSubMenu = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.BTN_NUEVO_BROKER = new System.Windows.Forms.Button();
+            this.btnBroker = new System.Windows.Forms.Button();
+            this.panelMaquilaSubMenu = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnMaquila = new System.Windows.Forms.Button();
+            this.panelConceptosSubMenu = new System.Windows.Forms.Panel();
+            this.btnReporteConceptos = new System.Windows.Forms.Button();
+            this.btnNuevoConcepto = new System.Windows.Forms.Button();
             this.btnConceptos = new System.Windows.Forms.Button();
             this.panelEmpresasSubMenu = new System.Windows.Forms.Panel();
             this.btnReporteEmpresas = new System.Windows.Forms.Button();
@@ -40,22 +56,16 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelFormHijo = new System.Windows.Forms.Panel();
-            this.btnNuevoConcepto = new System.Windows.Forms.Button();
-            this.btnReporteConceptos = new System.Windows.Forms.Button();
-            this.panelConceptosSubMenu = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnMaquila = new System.Windows.Forms.Button();
-            this.panelMaquilaSubMenu = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
+            this.panelSociosSubMenu.SuspendLayout();
+            this.panelBrokersSubMenu.SuspendLayout();
+            this.panelMaquilaSubMenu.SuspendLayout();
+            this.panelConceptosSubMenu.SuspendLayout();
             this.panelEmpresasSubMenu.SuspendLayout();
             this.panelClientesSubMenu.SuspendLayout();
             this.panelFormHijo.SuspendLayout();
-            this.panelConceptosSubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelMaquilaSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -63,6 +73,10 @@
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.panelSideMenu.Controls.Add(this.btnSalir);
+            this.panelSideMenu.Controls.Add(this.panelSociosSubMenu);
+            this.panelSideMenu.Controls.Add(this.btnSocios);
+            this.panelSideMenu.Controls.Add(this.panelBrokersSubMenu);
+            this.panelSideMenu.Controls.Add(this.btnBroker);
             this.panelSideMenu.Controls.Add(this.panelMaquilaSubMenu);
             this.panelSideMenu.Controls.Add(this.btnMaquila);
             this.panelSideMenu.Controls.Add(this.panelConceptosSubMenu);
@@ -77,6 +91,239 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(250, 561);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSalir.Location = new System.Drawing.Point(0, 854);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSalir.Size = new System.Drawing.Size(233, 45);
+            this.btnSalir.TabIndex = 12;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // panelSociosSubMenu
+            // 
+            this.panelSociosSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelSociosSubMenu.Controls.Add(this.button7);
+            this.panelSociosSubMenu.Controls.Add(this.BTN_NUEVO_SOCIO);
+            this.panelSociosSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSociosSubMenu.Location = new System.Drawing.Point(0, 766);
+            this.panelSociosSubMenu.Name = "panelSociosSubMenu";
+            this.panelSociosSubMenu.Size = new System.Drawing.Size(233, 88);
+            this.panelSociosSubMenu.TabIndex = 11;
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.LightGray;
+            this.button7.Location = new System.Drawing.Point(0, 40);
+            this.button7.Name = "button7";
+            this.button7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button7.Size = new System.Drawing.Size(233, 40);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "Reporte Socios";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // BTN_NUEVO_SOCIO
+            // 
+            this.BTN_NUEVO_SOCIO.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BTN_NUEVO_SOCIO.FlatAppearance.BorderSize = 0;
+            this.BTN_NUEVO_SOCIO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_NUEVO_SOCIO.ForeColor = System.Drawing.Color.LightGray;
+            this.BTN_NUEVO_SOCIO.Location = new System.Drawing.Point(0, 0);
+            this.BTN_NUEVO_SOCIO.Name = "BTN_NUEVO_SOCIO";
+            this.BTN_NUEVO_SOCIO.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.BTN_NUEVO_SOCIO.Size = new System.Drawing.Size(233, 40);
+            this.BTN_NUEVO_SOCIO.TabIndex = 1;
+            this.BTN_NUEVO_SOCIO.Text = "Nuevo";
+            this.BTN_NUEVO_SOCIO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_NUEVO_SOCIO.UseVisualStyleBackColor = true;
+            this.BTN_NUEVO_SOCIO.Click += new System.EventHandler(this.BTN_NUEVO_SOCIO_Click);
+            // 
+            // btnSocios
+            // 
+            this.btnSocios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSocios.FlatAppearance.BorderSize = 0;
+            this.btnSocios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSocios.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSocios.Location = new System.Drawing.Point(0, 721);
+            this.btnSocios.Name = "btnSocios";
+            this.btnSocios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSocios.Size = new System.Drawing.Size(233, 45);
+            this.btnSocios.TabIndex = 10;
+            this.btnSocios.Text = "Socios";
+            this.btnSocios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSocios.UseVisualStyleBackColor = true;
+            this.btnSocios.Click += new System.EventHandler(this.btnSocios_Click);
+            // 
+            // panelBrokersSubMenu
+            // 
+            this.panelBrokersSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelBrokersSubMenu.Controls.Add(this.button4);
+            this.panelBrokersSubMenu.Controls.Add(this.BTN_NUEVO_BROKER);
+            this.panelBrokersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBrokersSubMenu.Location = new System.Drawing.Point(0, 633);
+            this.panelBrokersSubMenu.Name = "panelBrokersSubMenu";
+            this.panelBrokersSubMenu.Size = new System.Drawing.Size(233, 88);
+            this.panelBrokersSubMenu.TabIndex = 9;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.LightGray;
+            this.button4.Location = new System.Drawing.Point(0, 40);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(233, 40);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Reporte Brokers";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // BTN_NUEVO_BROKER
+            // 
+            this.BTN_NUEVO_BROKER.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BTN_NUEVO_BROKER.FlatAppearance.BorderSize = 0;
+            this.BTN_NUEVO_BROKER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_NUEVO_BROKER.ForeColor = System.Drawing.Color.LightGray;
+            this.BTN_NUEVO_BROKER.Location = new System.Drawing.Point(0, 0);
+            this.BTN_NUEVO_BROKER.Name = "BTN_NUEVO_BROKER";
+            this.BTN_NUEVO_BROKER.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.BTN_NUEVO_BROKER.Size = new System.Drawing.Size(233, 40);
+            this.BTN_NUEVO_BROKER.TabIndex = 1;
+            this.BTN_NUEVO_BROKER.Text = "Nuevo";
+            this.BTN_NUEVO_BROKER.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_NUEVO_BROKER.UseVisualStyleBackColor = true;
+            this.BTN_NUEVO_BROKER.Click += new System.EventHandler(this.BTN_NUEVO_BROKER_Click);
+            // 
+            // btnBroker
+            // 
+            this.btnBroker.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBroker.FlatAppearance.BorderSize = 0;
+            this.btnBroker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBroker.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBroker.Location = new System.Drawing.Point(0, 588);
+            this.btnBroker.Name = "btnBroker";
+            this.btnBroker.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnBroker.Size = new System.Drawing.Size(233, 45);
+            this.btnBroker.TabIndex = 8;
+            this.btnBroker.Text = "Brokers";
+            this.btnBroker.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBroker.UseVisualStyleBackColor = true;
+            this.btnBroker.Click += new System.EventHandler(this.btnBroker_Click);
+            // 
+            // panelMaquilaSubMenu
+            // 
+            this.panelMaquilaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMaquilaSubMenu.Controls.Add(this.button2);
+            this.panelMaquilaSubMenu.Controls.Add(this.button3);
+            this.panelMaquilaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMaquilaSubMenu.Location = new System.Drawing.Point(0, 500);
+            this.panelMaquilaSubMenu.Name = "panelMaquilaSubMenu";
+            this.panelMaquilaSubMenu.Size = new System.Drawing.Size(233, 88);
+            this.panelMaquilaSubMenu.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.LightGray;
+            this.button2.Location = new System.Drawing.Point(0, 40);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(233, 40);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Reporte Maquilas";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.LightGray;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(233, 40);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Nuevo";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnNuevaMaquila_Click);
+            // 
+            // btnMaquila
+            // 
+            this.btnMaquila.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMaquila.FlatAppearance.BorderSize = 0;
+            this.btnMaquila.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaquila.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMaquila.Location = new System.Drawing.Point(0, 455);
+            this.btnMaquila.Name = "btnMaquila";
+            this.btnMaquila.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMaquila.Size = new System.Drawing.Size(233, 45);
+            this.btnMaquila.TabIndex = 6;
+            this.btnMaquila.Text = "Maquilas";
+            this.btnMaquila.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaquila.UseVisualStyleBackColor = true;
+            this.btnMaquila.Click += new System.EventHandler(this.btnMaquila_Click);
+            // 
+            // panelConceptosSubMenu
+            // 
+            this.panelConceptosSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelConceptosSubMenu.Controls.Add(this.btnReporteConceptos);
+            this.panelConceptosSubMenu.Controls.Add(this.btnNuevoConcepto);
+            this.panelConceptosSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConceptosSubMenu.Location = new System.Drawing.Point(0, 367);
+            this.panelConceptosSubMenu.Name = "panelConceptosSubMenu";
+            this.panelConceptosSubMenu.Size = new System.Drawing.Size(233, 88);
+            this.panelConceptosSubMenu.TabIndex = 5;
+            // 
+            // btnReporteConceptos
+            // 
+            this.btnReporteConceptos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporteConceptos.FlatAppearance.BorderSize = 0;
+            this.btnReporteConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteConceptos.ForeColor = System.Drawing.Color.LightGray;
+            this.btnReporteConceptos.Location = new System.Drawing.Point(0, 40);
+            this.btnReporteConceptos.Name = "btnReporteConceptos";
+            this.btnReporteConceptos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnReporteConceptos.Size = new System.Drawing.Size(233, 40);
+            this.btnReporteConceptos.TabIndex = 2;
+            this.btnReporteConceptos.Text = "Reporte Conceptos";
+            this.btnReporteConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteConceptos.UseVisualStyleBackColor = true;
+            this.btnReporteConceptos.Click += new System.EventHandler(this.btnReporteConceptos_Click);
+            // 
+            // btnNuevoConcepto
+            // 
+            this.btnNuevoConcepto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevoConcepto.FlatAppearance.BorderSize = 0;
+            this.btnNuevoConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoConcepto.ForeColor = System.Drawing.Color.LightGray;
+            this.btnNuevoConcepto.Location = new System.Drawing.Point(0, 0);
+            this.btnNuevoConcepto.Name = "btnNuevoConcepto";
+            this.btnNuevoConcepto.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnNuevoConcepto.Size = new System.Drawing.Size(233, 40);
+            this.btnNuevoConcepto.TabIndex = 1;
+            this.btnNuevoConcepto.Text = "Nuevo";
+            this.btnNuevoConcepto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoConcepto.UseVisualStyleBackColor = true;
+            this.btnNuevoConcepto.Click += new System.EventHandler(this.btnNuevoConcepto_Click);
             // 
             // btnConceptos
             // 
@@ -229,49 +476,7 @@
             this.panelFormHijo.Name = "panelFormHijo";
             this.panelFormHijo.Size = new System.Drawing.Size(684, 561);
             this.panelFormHijo.TabIndex = 1;
-            // 
-            // btnNuevoConcepto
-            // 
-            this.btnNuevoConcepto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNuevoConcepto.FlatAppearance.BorderSize = 0;
-            this.btnNuevoConcepto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoConcepto.ForeColor = System.Drawing.Color.LightGray;
-            this.btnNuevoConcepto.Location = new System.Drawing.Point(0, 0);
-            this.btnNuevoConcepto.Name = "btnNuevoConcepto";
-            this.btnNuevoConcepto.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnNuevoConcepto.Size = new System.Drawing.Size(233, 40);
-            this.btnNuevoConcepto.TabIndex = 1;
-            this.btnNuevoConcepto.Text = "Nuevo";
-            this.btnNuevoConcepto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoConcepto.UseVisualStyleBackColor = true;
-            this.btnNuevoConcepto.Click += new System.EventHandler(this.btnNuevoConcepto_Click);
-            // 
-            // btnReporteConceptos
-            // 
-            this.btnReporteConceptos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReporteConceptos.FlatAppearance.BorderSize = 0;
-            this.btnReporteConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteConceptos.ForeColor = System.Drawing.Color.LightGray;
-            this.btnReporteConceptos.Location = new System.Drawing.Point(0, 40);
-            this.btnReporteConceptos.Name = "btnReporteConceptos";
-            this.btnReporteConceptos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnReporteConceptos.Size = new System.Drawing.Size(233, 40);
-            this.btnReporteConceptos.TabIndex = 2;
-            this.btnReporteConceptos.Text = "Reporte Conceptos";
-            this.btnReporteConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporteConceptos.UseVisualStyleBackColor = true;
-            this.btnReporteConceptos.Click += new System.EventHandler(this.btnReporteConceptos_Click);
-            // 
-            // panelConceptosSubMenu
-            // 
-            this.panelConceptosSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelConceptosSubMenu.Controls.Add(this.btnReporteConceptos);
-            this.panelConceptosSubMenu.Controls.Add(this.btnNuevoConcepto);
-            this.panelConceptosSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConceptosSubMenu.Location = new System.Drawing.Point(0, 367);
-            this.panelConceptosSubMenu.Name = "panelConceptosSubMenu";
-            this.panelConceptosSubMenu.Size = new System.Drawing.Size(233, 88);
-            this.panelConceptosSubMenu.TabIndex = 5;
+            this.panelFormHijo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormHijo_Paint);
             // 
             // pictureBox1
             // 
@@ -283,80 +488,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnMaquila
-            // 
-            this.btnMaquila.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMaquila.FlatAppearance.BorderSize = 0;
-            this.btnMaquila.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaquila.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMaquila.Location = new System.Drawing.Point(0, 455);
-            this.btnMaquila.Name = "btnMaquila";
-            this.btnMaquila.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMaquila.Size = new System.Drawing.Size(233, 45);
-            this.btnMaquila.TabIndex = 6;
-            this.btnMaquila.Text = "Maquilas";
-            this.btnMaquila.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaquila.UseVisualStyleBackColor = true;
-            this.btnMaquila.Click += new System.EventHandler(this.btnMaquila_Click);
-            // 
-            // panelMaquilaSubMenu
-            // 
-            this.panelMaquilaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMaquilaSubMenu.Controls.Add(this.button2);
-            this.panelMaquilaSubMenu.Controls.Add(this.button3);
-            this.panelMaquilaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMaquilaSubMenu.Location = new System.Drawing.Point(0, 500);
-            this.panelMaquilaSubMenu.Name = "panelMaquilaSubMenu";
-            this.panelMaquilaSubMenu.Size = new System.Drawing.Size(233, 88);
-            this.panelMaquilaSubMenu.TabIndex = 7;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.LightGray;
-            this.button2.Location = new System.Drawing.Point(0, 40);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(233, 40);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Reporte Clientes";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.LightGray;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(233, 40);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Nuevo";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.btnNuevaMaquila_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSalir.Location = new System.Drawing.Point(0, 588);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSalir.Size = new System.Drawing.Size(233, 45);
-            this.btnSalir.TabIndex = 8;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Menu
             // 
@@ -373,12 +504,14 @@
             this.Text = "Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.panelSideMenu.ResumeLayout(false);
+            this.panelSociosSubMenu.ResumeLayout(false);
+            this.panelBrokersSubMenu.ResumeLayout(false);
+            this.panelMaquilaSubMenu.ResumeLayout(false);
+            this.panelConceptosSubMenu.ResumeLayout(false);
             this.panelEmpresasSubMenu.ResumeLayout(false);
             this.panelClientesSubMenu.ResumeLayout(false);
             this.panelFormHijo.ResumeLayout(false);
-            this.panelConceptosSubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelMaquilaSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -406,5 +539,13 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnMaquila;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel panelSociosSubMenu;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button BTN_NUEVO_SOCIO;
+        private System.Windows.Forms.Button btnSocios;
+        private System.Windows.Forms.Panel panelBrokersSubMenu;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BTN_NUEVO_BROKER;
+        private System.Windows.Forms.Button btnBroker;
     }
 }
