@@ -33,9 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -85,6 +92,12 @@
     <Compile Include="VISTAS\Empresas.Designer.cs">
       <DependentUpon>Empresas.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTAS\frm_MovimientoConcentrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTAS\frm_MovimientoConcentrado.Designer.cs">
+      <DependentUpon>frm_MovimientoConcentrado.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTAS\Maquilas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +110,16 @@
     <Compile Include="VISTAS\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="VISTAS\Socios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTAS\Socios.Designer.cs">
+      <DependentUpon>Socios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frm_acceso.resx">
       <DependentUpon>frm_acceso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -122,11 +142,17 @@
     <EmbeddedResource Include="VISTAS\Empresas.resx">
       <DependentUpon>Empresas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VISTAS\frm_MovimientoConcentrado.resx">
+      <DependentUpon>frm_MovimientoConcentrado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VISTAS\Maquilas.resx">
       <DependentUpon>Maquilas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VISTAS\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VISTAS\Socios.resx">
+      <DependentUpon>Socios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ALFADataSet.xsc">
       <DependentUpon>ALFADataSet.xsd</DependentUpon>

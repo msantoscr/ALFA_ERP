@@ -30,6 +30,7 @@
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnMovConcentrado = new System.Windows.Forms.Button();
             this.panelSociosSubMenu = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.BTN_NUEVO_SOCIO = new System.Windows.Forms.Button();
@@ -73,6 +74,7 @@
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.panelSideMenu.Controls.Add(this.btnSalir);
+            this.panelSideMenu.Controls.Add(this.btnMovConcentrado);
             this.panelSideMenu.Controls.Add(this.panelSociosSubMenu);
             this.panelSideMenu.Controls.Add(this.btnSocios);
             this.panelSideMenu.Controls.Add(this.panelBrokersSubMenu);
@@ -98,15 +100,31 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSalir.Location = new System.Drawing.Point(0, 854);
+            this.btnSalir.Location = new System.Drawing.Point(0, 899);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSalir.Size = new System.Drawing.Size(233, 45);
-            this.btnSalir.TabIndex = 12;
+            this.btnSalir.TabIndex = 13;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnMovConcentrado
+            // 
+            this.btnMovConcentrado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMovConcentrado.FlatAppearance.BorderSize = 0;
+            this.btnMovConcentrado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovConcentrado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMovConcentrado.Location = new System.Drawing.Point(0, 854);
+            this.btnMovConcentrado.Name = "btnMovConcentrado";
+            this.btnMovConcentrado.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMovConcentrado.Size = new System.Drawing.Size(233, 45);
+            this.btnMovConcentrado.TabIndex = 12;
+            this.btnMovConcentrado.Text = "Mov. Concentrado";
+            this.btnMovConcentrado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovConcentrado.UseVisualStyleBackColor = true;
+            this.btnMovConcentrado.Click += new System.EventHandler(this.btnMovConcentrado_Click);
             // 
             // panelSociosSubMenu
             // 
@@ -538,7 +556,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnMaquila;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnMovConcentrado;
         private System.Windows.Forms.Panel panelSociosSubMenu;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button BTN_NUEVO_SOCIO;
@@ -547,5 +565,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button BTN_NUEVO_BROKER;
         private System.Windows.Forms.Button btnBroker;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

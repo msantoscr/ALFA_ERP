@@ -172,7 +172,9 @@ namespace ALFA_ERP.VISTAS
         }
         private void BTN_NUEVO_SOCIO_Click(object sender, EventArgs e)
         {
-
+            abrirHijoForm(new VISTAS.Socios(user));
+            //
+            OcultarSubMenu();
         }
 
         #endregion
@@ -198,10 +200,6 @@ namespace ALFA_ERP.VISTAS
             formularioHijo.Show();
 
         }
-        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            btnSalir.PerformClick();
-        }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -214,6 +212,16 @@ namespace ALFA_ERP.VISTAS
 
         }
 
+        private void btnMovConcentrado_Click(object sender, EventArgs e)
+        {
+            abrirHijoForm(new VISTAS.frm_MovimientoConcentrado(user));
+            //
+            OcultarSubMenu();
+        }
 
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            btnSalir.PerformClick();
+        }
     }
 }

@@ -93,7 +93,7 @@ namespace ALFA_ERP
 
         #endregion
 
-        #region "CLIENTES"
+        
 
         public void reporteClientes(DataGridView grid)
         {
@@ -206,7 +206,7 @@ namespace ALFA_ERP
                 cerrarConexion();
             }
         }
-
+#region "CLIENTES"
         public int INSERTAR_CLIENTE(string nombre, string razon, string nomComercial, string rfc, string calle, string numInt, string numExt, string colonia, string codigoP, int municipio, int pais, int estado, string telefono, string correo, string userModifica)
         {
             try
@@ -605,6 +605,7 @@ namespace ALFA_ERP
         }
         #endregion
 
+        #region "BROKERS"
         public void reporteBroker(DataGridView grid)
         {
             try
@@ -703,5 +704,421 @@ namespace ALFA_ERP
                 cerrarConexion();
             }
         }
+
+        #endregion
+
+        #region "SOCIOS"
+        public void reporteSocios(DataGridView grid)
+        {
+            try
+            {
+                cmd = new SqlCommand("SP_REPORTE_SOCIOS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter Message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 200);
+                Message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(Message);
+
+                adaptador = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+
+                grid.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR..");
+            }
+        }
+
+        public int insertaSocio(string nombre, string rfc, string correo, string telefono, int municipio, int pais, int estado, string userModifica)
+        {
+            try
+            {
+
+                abrirConexion();
+                cmd = new SqlCommand("SP_INSERTA_NUEVO_SOCIO", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@NOMBRE_SOCIO", SqlDbType.NVarChar).Value = nombre;
+                cmd.Parameters.Add("@RFC", SqlDbType.NVarChar).Value = rfc;
+                cmd.Parameters.Add("@SOCIO_CORREO", SqlDbType.NVarChar).Value = correo;
+                cmd.Parameters.Add("@SOCIO_TELEFONO", SqlDbType.NVarChar).Value = telefono;
+                cmd.Parameters.Add("@CIUDAD", SqlDbType.Int).Value = municipio;
+                cmd.Parameters.Add("@PAIS", SqlDbType.Int).Value = pais;
+                cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
+
+                cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+
+                cmd.ExecuteNonQuery();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public int actualizaSocio(string nombre, string rfc, string correo, string telefono, int municipio, int pais, int estado, string userModifica, int id)
+        {
+            try
+            {
+
+                abrirConexion();
+                cmd = new SqlCommand("SP_ACTUALIZA_SOCIO", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@NOMBRE_SOCIO", SqlDbType.NVarChar).Value = nombre;
+                cmd.Parameters.Add("@RFC", SqlDbType.NVarChar).Value = rfc;
+                cmd.Parameters.Add("@SOCIO_TELEFONO", SqlDbType.NVarChar).Value = telefono;
+                cmd.Parameters.Add("@SOCIO_CORREO", SqlDbType.NVarChar).Value = correo;
+                cmd.Parameters.Add("@CIUDAD", SqlDbType.Int).Value = municipio;
+                cmd.Parameters.Add("@PAIS", SqlDbType.Int).Value = pais;
+                cmd.Parameters.Add("@ESTADO", SqlDbType.Int).Value = estado;
+
+                cmd.Parameters.Add("@MODIFICADOPOR", SqlDbType.NVarChar, 200).Value = userModifica;
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+
+                cmd.ExecuteNonQuery();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        #endregion
+
+        #region "CONCENTRADO"
+
+        public DataSet getClientesConcentrado()
+        {
+            abrirConexion();
+            try
+            {
+                DataSet ds = new DataSet();
+                cmd = new SqlCommand("SP_OBTENER_CLIENTES", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+                Rows = cmd.ExecuteNonQuery();
+
+                adaptador = new SqlDataAdapter(cmd);
+                adaptador.Fill(ds);
+
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public DataSet getEmpresasConcentrado()
+        {
+            abrirConexion();
+            try
+            {
+                DataSet ds = new DataSet();
+                cmd = new SqlCommand("SP_OBTENER_EMPRESAS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+                Rows = cmd.ExecuteNonQuery();
+
+                adaptador = new SqlDataAdapter(cmd);
+                adaptador.Fill(ds);
+
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public DataSet getConceptoConcentrado()
+        {
+            abrirConexion();
+            try
+            {
+                DataSet ds = new DataSet();
+                cmd = new SqlCommand("SP_OBTENER_CONCEPTOS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+                Rows = cmd.ExecuteNonQuery();
+
+                adaptador = new SqlDataAdapter(cmd);
+                adaptador.Fill(ds);
+
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public DataSet getIva()
+        {
+            abrirConexion();
+            try
+            {
+                DataSet ds = new DataSet();
+                cmd = new SqlCommand("SP_OBTENER_IVA", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+                Rows = cmd.ExecuteNonQuery();
+
+                adaptador = new SqlDataAdapter(cmd);
+                adaptador.Fill(ds);
+
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public DataSet getMaquila()
+        {
+            abrirConexion();
+            try
+            {
+                DataSet ds = new DataSet();
+                cmd = new SqlCommand("SP_OBTENER_MAQUILAS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+                Rows = cmd.ExecuteNonQuery();
+
+                adaptador = new SqlDataAdapter(cmd);
+                adaptador.Fill(ds);
+
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public DataSet getBroker()
+        {
+            abrirConexion();
+            try
+            {
+                DataSet ds = new DataSet();
+                cmd = new SqlCommand("SP_OBTENER_BROKERS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+                Rows = cmd.ExecuteNonQuery();
+
+                adaptador = new SqlDataAdapter(cmd);
+                adaptador.Fill(ds);
+
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public DataSet getSocios()
+        {
+            abrirConexion();
+            try
+            {
+                DataSet ds = new DataSet();
+                cmd = new SqlCommand("SP_OBTENER_SOCIOS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+                Rows = cmd.ExecuteNonQuery();
+
+                adaptador = new SqlDataAdapter(cmd);
+                adaptador.Fill(ds);
+
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public DataSet getDirectores()
+        {
+            abrirConexion();
+            try
+            {
+                DataSet ds = new DataSet();
+                cmd = new SqlCommand("SP_OBTENER_DIRECTOR", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+                Rows = cmd.ExecuteNonQuery();
+
+                adaptador = new SqlDataAdapter(cmd);
+                adaptador.Fill(ds);
+
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        public int INSERTAR_CONCENTRADO(int idCliente, int idEmpresa, int idConcepto, decimal importeNeto, 
+            int porcentajeIva,decimal subtotal,int facturaSiNo, int idMaquila, decimal porcentajeMaquila,
+            decimal comisionMaquila, decimal saldoMaquila, decimal porcentajeCliente,decimal comisionCliente, 
+            decimal devolucionCliente, string devolucion, string status, int idBroker, decimal porcentajeBroker, 
+            decimal comisionBroker, string statusBroker, decimal porcentajeCosto20, decimal comision20, int idSocio,
+            decimal porcentajeSocio, decimal comisionSocio, string statusComsionSocio, decimal porcentajeDirector,
+            int idDirector, decimal comisionDirector, string statusDirector, decimal utilidad, decimal saldoCliente, 
+            string observaciones, string usuarioModifica)
+        {
+            try
+            {
+
+                abrirConexion();
+                cmd = new SqlCommand("SP_INSERTA_NUEVO_CONCENTRADO", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@idCliente", SqlDbType.Int).Value = idCliente;
+                cmd.Parameters.Add("@idEmpresa", SqlDbType.Int).Value = idEmpresa;
+                cmd.Parameters.Add("@idConcepto", SqlDbType.Int).Value = idConcepto;
+                cmd.Parameters.Add("@importeNeto", SqlDbType.Decimal).Value = importeNeto;
+                cmd.Parameters.Add("@porcentajeIva", SqlDbType.Int).Value = porcentajeIva;
+                cmd.Parameters.Add("@subtotal", SqlDbType.Decimal).Value = subtotal;
+                cmd.Parameters.Add("@facturaSiNo", SqlDbType.Int).Value = facturaSiNo;
+                cmd.Parameters.Add("@idMaquila", SqlDbType.Int).Value = idMaquila;
+                cmd.Parameters.Add("@porcentajeMaquila", SqlDbType.Decimal).Value = porcentajeMaquila;
+                cmd.Parameters.Add("@comisionMaquila", SqlDbType.Decimal).Value = comisionMaquila;
+                cmd.Parameters.Add("@saldoMaquila", SqlDbType.Decimal).Value = saldoMaquila;
+                cmd.Parameters.Add("@porcentajeCliente", SqlDbType.Decimal).Value = porcentajeCliente;
+                cmd.Parameters.Add("@comisionCliente", SqlDbType.Decimal).Value = comisionCliente;
+                cmd.Parameters.Add("@devolucionCliente", SqlDbType.Decimal).Value = devolucionCliente;
+                cmd.Parameters.Add("@devolucion", SqlDbType.NVarChar).Value = devolucion;
+                cmd.Parameters.Add("@status", SqlDbType.NVarChar).Value = status;
+                cmd.Parameters.Add("@idBroker", SqlDbType.Int).Value = idBroker;
+                cmd.Parameters.Add("@porcentajeBroker", SqlDbType.Decimal).Value = porcentajeBroker;
+                cmd.Parameters.Add("@comisionBroker", SqlDbType.Decimal).Value = comisionBroker;
+                cmd.Parameters.Add("@statusBroker", SqlDbType.NVarChar).Value = statusBroker;
+                cmd.Parameters.Add("@porcentajeCosto20", SqlDbType.Decimal).Value = porcentajeCosto20;
+                cmd.Parameters.Add("@comision20", SqlDbType.Decimal).Value = comision20;
+                cmd.Parameters.Add("@idSocio", SqlDbType.Int).Value = idSocio;
+                cmd.Parameters.Add("@porcentajeSocio", SqlDbType.Decimal).Value = porcentajeSocio;
+                cmd.Parameters.Add("@comisionSocio", SqlDbType.Decimal).Value = comisionSocio;
+                cmd.Parameters.Add("@statusComsionSocio", SqlDbType.NVarChar).Value = statusComsionSocio;
+                cmd.Parameters.Add("@porcentajeDirector", SqlDbType.Int).Value = porcentajeDirector;
+                cmd.Parameters.Add("@idDirector", SqlDbType.Int).Value = idDirector;
+                cmd.Parameters.Add("@comisionDirector", SqlDbType.Decimal).Value = comisionDirector;
+                cmd.Parameters.Add("@statusDirector", SqlDbType.NVarChar).Value = statusDirector;
+                cmd.Parameters.Add("@utilidad", SqlDbType.Decimal).Value = utilidad;
+                cmd.Parameters.Add("@saldoCliente", SqlDbType.Decimal).Value = saldoCliente;
+                cmd.Parameters.Add("@observaciones", SqlDbType.NVarChar).Value = observaciones;
+                cmd.Parameters.Add("@usuarioModifica", SqlDbType.NVarChar, 200).Value = usuarioModifica;
+
+
+                SqlParameter message = new SqlParameter("@MENSAJE", SqlDbType.NVarChar, 500);
+                message.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(message);
+
+                cmd.ExecuteNonQuery();
+
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SISTEMA..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                cerrarConexion();
+            }
+        }
+
+        #endregion
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.LBL_TITTULO_MAQUILA = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.LBL_TITTULO_BROKER = new System.Windows.Forms.Label();
             this.BTN_SALIR = new System.Windows.Forms.PictureBox();
             this.TXT_NOMBRE = new System.Windows.Forms.TextBox();
             this.LBL_NOMBRE = new System.Windows.Forms.Label();
@@ -56,17 +56,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvBrokers)).BeginInit();
             this.SuspendLayout();
             // 
-            // LBL_TITTULO_MAQUILA
+            // LBL_TITTULO_BROKER
             // 
-            this.LBL_TITTULO_MAQUILA.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LBL_TITTULO_MAQUILA.AutoSize = true;
-            this.LBL_TITTULO_MAQUILA.BackColor = System.Drawing.Color.Transparent;
-            this.LBL_TITTULO_MAQUILA.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_TITTULO_MAQUILA.Location = new System.Drawing.Point(283, 9);
-            this.LBL_TITTULO_MAQUILA.Name = "LBL_TITTULO_MAQUILA";
-            this.LBL_TITTULO_MAQUILA.Size = new System.Drawing.Size(69, 23);
-            this.LBL_TITTULO_MAQUILA.TabIndex = 102;
-            this.LBL_TITTULO_MAQUILA.Text = "BROKER";
+            this.LBL_TITTULO_BROKER.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LBL_TITTULO_BROKER.AutoSize = true;
+            this.LBL_TITTULO_BROKER.BackColor = System.Drawing.Color.Transparent;
+            this.LBL_TITTULO_BROKER.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_TITTULO_BROKER.Location = new System.Drawing.Point(283, 9);
+            this.LBL_TITTULO_BROKER.Name = "LBL_TITTULO_BROKER";
+            this.LBL_TITTULO_BROKER.Size = new System.Drawing.Size(69, 23);
+            this.LBL_TITTULO_BROKER.TabIndex = 102;
+            this.LBL_TITTULO_BROKER.Text = "BROKER";
             // 
             // BTN_SALIR
             // 
@@ -253,25 +253,25 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBrokers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvBrokers.BackgroundColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBrokers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBrokers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBrokers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBrokers.EnableHeadersVisualStyles = false;
             this.dgvBrokers.GridColor = System.Drawing.Color.Teal;
             this.dgvBrokers.Location = new System.Drawing.Point(12, 57);
             this.dgvBrokers.Name = "dgvBrokers";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Olive;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dgvBrokers.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dgvBrokers.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBrokers.Size = new System.Drawing.Size(365, 432);
             this.dgvBrokers.TabIndex = 123;
             this.dgvBrokers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBrokers_CellDoubleClick);
@@ -347,7 +347,7 @@
             this.Controls.Add(this.TXT_NOMBRE);
             this.Controls.Add(this.LBL_NOMBRE);
             this.Controls.Add(this.BTN_SALIR);
-            this.Controls.Add(this.LBL_TITTULO_MAQUILA);
+            this.Controls.Add(this.LBL_TITTULO_BROKER);
             this.Name = "Broker";
             this.Text = "Broker";
             this.Load += new System.EventHandler(this.Broker_Load);
@@ -360,7 +360,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LBL_TITTULO_MAQUILA;
+        private System.Windows.Forms.Label LBL_TITTULO_BROKER;
         private System.Windows.Forms.PictureBox BTN_SALIR;
         private System.Windows.Forms.TextBox TXT_NOMBRE;
         private System.Windows.Forms.Label LBL_NOMBRE;
